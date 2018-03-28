@@ -1,0 +1,288 @@
+
+h1{
+font-size: 35px;
+line-height: 45px;
+color: rgb(65,65,65);
+font-family: "Fira Sans";
+
+}
+
+.wrapper{
+width:100%;
+height:100vh;
+padding:0;
+margin:0;
+}
+.container{
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+
+}
+.up{
+background-color: #f6f6f6;
+flex:1 1 auto;
+}
+.header{
+height:80px;
+background-color:white;
+border-bottom:2px solid grey;
+display:flex;
+align-items:flex-start;
+box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+}
+
+header img{
+border-radius:50% 50%;
+width:60px;
+height:60px;
+border:2px solid grey;
+}
+.header_left{
+align-self:center;
+width:290px;
+}
+
+
+.photo{
+padding-left:195px;	
+}
+
+.header_center{
+align-self:center;
+width:70%;
+font-size: 18px;
+line-height: 28px;
+color: rgb(65,65,65);
+font-family: "Fira Sans";
+padding-left:15px;
+
+}
+
+.header_right{
+align-self:center;
+width:200px;
+width:20%;
+text-align:right;
+font-size: 18px;
+line-height: 28px;
+color: #33c1e3;
+font-family: "Fira Sans";
+font-weight: bold;
+padding-right:195px;
+}
+
+.header_right a{
+	text-decoration:none;
+	border-bottom: 2px dotted;
+	color:#33c1e3;
+}
+.header_right a:hover {
+  color:#e85f61;
+}
+
+.main_menu{
+    list-style: none;
+}
+.sub_menu{
+border:1px solid #727272;
+border-radius: 15px;
+background-color: white;	
+width:170px;
+height:90px;
+text-align: left;
+font-size: 18px;
+line-height: 28px;
+color: #33c1e3;
+font-family: "Fira Sans";
+font-weight: bold;
+padding-right:195px;
+}
+.main_menu>li{
+position: relative;}
+.main_menu .sub_menu {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-self:center;
+display: none;
+padding: 10px;
+}
+.main_menu > li:hover .sub_menu {
+    display: block;
+}
+.sub_menu li{
+font-size: 18px;
+line-height: 28px;
+color: rgb(65,65,65);
+font-family: "Fira Sans";
+}
+.sub_menu i{
+color:#33c1e3;
+}
+
+
+.main{
+display:flex;
+flex-direction:row;
+height:100%;
+}
+
+.left{
+width:32%;
+height:100%;
+font-size: 18px;
+line-height: 24px;
+font-family: "Fira Sans";
+text-align: right;
+}
+
+.left a{
+	text-decoration: none;
+}
+.left a:hover{
+	color:#33c1e3;
+}
+
+.left ul{
+list-style: none;
+}
+.left li{
+padding:10px 40px 10px 0px;
+color:black;
+}
+.left li:hover{
+color:#33c1e3;
+border-right:5px solid #33c1e3;	
+}
+.left li:active{
+	color: #33c1e3;
+ 	list-style: none;
+ 	font-weight: bold;
+ 	border-right:5px solid #33c1e3;
+}
+.current{
+color:#33c1e3;	
+border-right:5px solid #33c1e3;	
+}
+.current_a{color:#33c1e3;
+}
+.next{
+color:black;	
+}
+
+.center{
+width:25%;
+height:100%;
+vertical-align:middle;
+
+}
+.center img{
+border-radius: 50% 50%;
+width:220px;
+height:220px;
+}
+.photo_center{
+padding-left: 49px;
+padding-top: 24px;
+
+}
+
+.right{
+width:43%;
+height:100%;
+padding:0px;
+}
+.right_text{
+font-size: 18px;
+line-height: 26px;
+color: rgb(100,100,100);
+font-family:"Fira Sans";
+width:390px;
+height:400px;	
+overflow: scroll;
+padding:0px;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.btn{
+font-size: 15px;
+line-height: 28px;
+color: #e85f61;
+font-family: "Fira Sans";
+font-weight: bold;
+border:2px solid #e85f61;
+border-radius:20px;
+padding:5px;
+width:175px;
+box-sizing: border-box;
+text-align: center;
+margin-top:19px;
+margin-left:200px;
+}
+.btn:hover{
+	cursor:pointer;
+	color:white;
+	background-color:#e85f61; 
+}
+
+
+.footer{
+height:50px;
+background-color:#414141;
+display: flex;
+color:#727272;
+font-size: 14px;
+line-height: 40px;
+color: rgb(156,156,156);
+font-family: "Fira Sans";
+}
+.footer_left{
+align-self: center;
+text-align: center;
+width:900px;
+padding-left:98px;
+}
+
+.footer_right{
+align-self: center;
+width: 700px;
+display: flex;
+padding-top:15px;
+padding-left:539px;
+}
+.vk{
+padding-left: 9px;
+padding-right: 9px;
+}
+
+.facebook img{
+width:30px;
+height:30px;
+
+}
+.vk img{
+width:30px;
+height:30px;
+}
+
+.twitter img{
+width:30px;
+height:30px;
+}
