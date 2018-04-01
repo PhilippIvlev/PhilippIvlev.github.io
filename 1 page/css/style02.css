@@ -44,7 +44,6 @@ align-self:center;
 width:290px;
 }
 
-
 .photo{
 padding-left:195px;	
 }
@@ -69,7 +68,6 @@ font-size: 18px;
 line-height: 28px;
 color: #33c1e3;
 font-family: "Fira Sans";
-font-weight: bold;
 padding-right:195px;
 }
 
@@ -85,19 +83,20 @@ padding-right:195px;
 .main_menu{
     list-style: none;
 }
+.main_menu a{
+   font-weight: bold; 
+}
 .sub_menu{
-border:1px solid #727272;
+border:1px solid #f7f7f7;
 border-radius: 15px;
 background-color: white;	
 width:170px;
-height:90px;
+min-height:90px;
 text-align: left;
 font-size: 18px;
 line-height: 28px;
 color: #33c1e3;
 font-family: "Fira Sans";
-font-weight: bold;
-padding-right:195px;
 }
 .main_menu>li{
 position: relative;}
@@ -106,8 +105,7 @@ position: relative;}
     top: 35px;
     left: 0px;
     z-index: 10;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
     list-style: none;
     align-self:center;
 display: none;
@@ -121,18 +119,32 @@ font-size: 18px;
 line-height: 28px;
 color: rgb(65,65,65);
 font-family: "Fira Sans";
+padding-top:8px;
 }
 .sub_menu i{
 color:#33c1e3;
 }
-
-
+.sub_menu::before{
+content:"";
+display:block;
+width:14px;
+height:14px;
+background-color:white;
+border:1px solid #f6f6f6;
+transform:rotate(45deg);
+position:absolute;
+top:-8px;
+right:50%;
+border-top:1px solid #f6f6f6;
+border-bottom: transparent;
+border-right: transparent;
+border-left: 1px solid #f6f6f6;
+}
 .main{
 display:flex;
 flex-direction:row;
 height:100%;
 }
-
 .left{
 width:32%;
 height:100%;
@@ -141,7 +153,6 @@ line-height: 24px;
 font-family: "Fira Sans";
 text-align: right;
 }
-
 .left a{
 	text-decoration: none;
 }
