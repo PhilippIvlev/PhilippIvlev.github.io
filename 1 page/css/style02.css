@@ -230,11 +230,14 @@ font-weight: bold;
 border:2px solid #e85f61;
 border-radius:20px;
 padding:5px;
-width:175px;
+width:155px;
 box-sizing: border-box;
 text-align: center;
 margin-top:19px;
 margin-left:200px;
+}
+.right a{
+text-decoration: none;
 }
 .btn:hover{
 	cursor:pointer;
