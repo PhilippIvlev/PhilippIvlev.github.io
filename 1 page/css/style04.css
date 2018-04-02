@@ -125,6 +125,11 @@ padding-top:8px;
 .sub_menu i{
 color:#33c1e3;
 }
+.sub_menu a{
+border-bottom:none; 
+font-weight:normal;
+color:black;
+}
 .sub_menu::before{
 content:"";
 display:block;
@@ -143,6 +148,7 @@ border-left: 1px solid #f6f6f6;
 }
 .main{
 display:flex;
+margin:0;
 }
 .left{
 width:32%;
@@ -192,6 +198,10 @@ align-items: center;
 width:990px;
 flex-wrap: wrap;
 }
+.cites li{
+list-style: none; 
+}
+
 .center_right a{
 text-decoration:none;
 color:#727272;
@@ -233,11 +243,13 @@ border-radius:10px;
 	height: 170px;
 	border-radius: 10px 10px 0px 0px;
 }
+.block_down1 ul,.block_down2 ul,.block_down3 ul,.block_down4 ul,.block_down5 ul{
+padding-left:10px;
+}
 .block1:hover, .block2:hover, .block3:hover, .block4:hover, .block5:hover{
 cursor:pointer;	
 }
 .footer{
-margin-top:30px;
 height:50px;
 display: flex;
 color:#727272;
@@ -245,9 +257,10 @@ font-size: 14px;
 line-height: 40px;
 color: rgb(156,156,156);
 font-family: "Fira Sans";
+margin-top:20px;
 }
 .footer_left{
-height:65px;
+height:50px;
 align-self: center;
 text-align: center;
 width:60%;
@@ -259,7 +272,6 @@ height:50px;
 align-self: center;
 width: 40%;
 display: flex;
-padding-top:15px;
 padding-left:539px;
 background-color:#414141;
 }
@@ -267,14 +279,20 @@ background-color:#414141;
 padding-left: 9px;
 padding-right: 9px;
 }
+
+
 .facebook img{
 width:30px;
 height:30px;
+
 }
+
 .vk img{
 width:30px;
 height:30px;
 }
+
+
 .twitter img{
 width:30px;
 height:30px;

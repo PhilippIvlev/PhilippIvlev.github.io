@@ -125,6 +125,11 @@ padding-top:8px;
 .sub_menu i{
 color:#33c1e3;
 }
+.sub_menu a{
+border-bottom:none; 
+font-weight:normal;
+color:black;
+}
 .sub_menu::before{
 content:"";
 display:block;
