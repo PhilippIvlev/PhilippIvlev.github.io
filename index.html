@@ -1,61 +1,412 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<meta content="telephone=no" name="format-detection" />
-<meta name="viewport" content="width=device-width">
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,600,700" rel="stylesheet">
-<link rel="stylesheet" href="1 page/css/style01.css">
-
-<html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta content="width=1024" name="viewport">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+<link rel="stylesheet" href="maincss.css">
+<html>  
 <head>
-<title>Hello!</title>
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images-and-icons/favicon package/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images-and-icons/favicon package/android-chrome-48x48.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images-and-icons/favicon package/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+<link rel="mask-icon" href="images-and-icons/favicon package/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+<title>(ТХБ)ТОЛЬЯТТИХИМБАНК</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script> 
+$(document).ready(function() {
+$('.open_button_inner').click(function(evt) {
+  	 evt.preventDefault();
+	 $('.card_wrapper').slideToggle(300);
+	 $(this).toggleClass('close'); 
+  }); // окончание click
+}); // окончание ready
+</script>
+
 </head>
-<body>
+
 <div class="wrapper">
-<div class="bigblock">
-
-<div class="main">
-<div class="empty">
-<div class="photo">
-<img src="1 page/photohelloandaboutandportfolio.png" alt="Photo with Anatolii" title="Anatolii">
-</div>
-</div>
-
+<div class="main">	
+<div class="header">	
 <div class="up">
 
-<div class="phototext">
-
-<p>Анатолий Анатольев</p>
+<div class="menu">
+<ul class="nav">
+<li><a href="http://www.thbank.ru/" alt="Go to THB Bank"><img src="images-and-icons/SVG/thb-logo-white.svg" alt="THB logo"></a></li>
+<a href="http://www.thbank.ru/" alt="Go to THB Bank"><li>Обратная связь</li></a>
+<a href="http://www.thbank.ru/" alt="Go to THB Bank"><li>Офисы и банкоматы</li></a>
+<a href="http://www.thbank.ru/" alt="Go to THB Bank"><li>Войти в интернет-банк</li></a>
+<a id="tel_nav" href="tel:+718171" alt="Go to THB Bank"><li>(8482) 71-81-71</li></a>
+<a href="http://www.thbank.ru/" alt="Go to THB Bank"><li><img src="images-and-icons/SVG/menu.svg"></li></a>	
+</ul>
+</div>
+<!--Карусель старт-->
+<div class="face">
+<div class="left_arrow"><img src="images-and-icons/SVG/arrow-left.svg"> </div>
+<div class="rider_pic"><img src="images-and-icons/images/cards-personal.png"></div>
+<div class="face_text">
+<ul class="face_list">
+<li>Банковские карты ТХБ</li>
+<li>Выгодные условия и удобная оплата любых покупок!</li>
+<a href="http://www.thbank.ru/" alt="Go to THB Bank"><li> 
+<div class="face_button">
+<div class="face_button_text">Подробнее</div>
+</div></li></a>
+<li> 
+<div class="marks">
+<div class="mark"></div><div class="mark"></div><div class="mark"></div>
 </div>
 
+</li>
+</ul>	
 </div>
+<div class="right_arrow"><img src="images-and-icons/SVG/arrow-right.svg"></div>
+</div>
+<div class="open_button">
+	<div class="open_button_inner"><img src="images-and-icons/SVG/arrow-down-slider.svg" alt="slider"></div>
+</div>
+<!--Карусель конец -->
+</div>
+</div>
+<!--Старт инфо о карте-->
+<div class="card_wrapper">
+<div class="card_wrapper_inner">
+<div class="card_links">
+<ul class="fixed_menu_card_info">
+<li>Главная страница</li>
+<li>Физическим лицам</li>
+<li>Банковские карты</li>
+<li>Дебетовая карта VISA Gold</li>
+</ul>
+</div>
+<div class="inside_card_wrapper">
+<div class="inside_card_wrapper_width">
+<div class="name"><h1> Дебетовая карта VISA Gold</h1> </div>
+
+<div class="lines_1">
+<svg width="100%" height="4">	
+<polyline points="-32 0,0 0" stroke-width="1" stroke="#fbb03b"/> 
+<polyline points="0 0,20 0" stroke-width="1" stroke="darkgreen"/> 
+<polyline points="60 0,130 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="130 0,180 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="200 0,240 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="240 0,255 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="255 0,280 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="280 0,330 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="370 0,390 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="390 0,450 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="450 0,490 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="490 0,530 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="530 0,550 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="570 0,630 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="630 0,690 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="690 0,730 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="730 0,745 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="745 0,780 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="780 0,830 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="830 0,850 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="870 0,890 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="890 0,920 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="920 0,950 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="950 0,980 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="980 0,995 0" stroke-width="1" stroke="darkgreen"/>
+</svg>	
+	
 
 </div>
 
-<div class="down">
-<a href="1 page/02about.html" alt="Go to site">
-<div class="btn">
-	Перейти на сайт
+<div class="card_with_photo">
+<div class="card_with_photo_inner">	
+<div class="card_with_photo_photo"> <img src="images-and-icons/images/card-visa-example.png"></div>
+<div class="card_with_photo_text"> Карта VISA Gold - это синоним престижа, статуса и качества, признак респектабельности и состоятельности.</div>
+</div>
+</div>
+<!--Старт преимущества карт-->
+<div class="charac">
+<div class="charac_name"><h2>Особенности карты</h2></div>
+<div class="charac8">
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/card-advantage.svg"> </div>
+<div class="card_charact_1_text">Платежная система VISA</div>
+</div>
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/foreign-currency-advantage.svg"> </div>
+<div>Валюта счета - рубль, доллар, евро</div>
+</div>
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/add-funds-advantage.svg"> </div>
+<div>Пополнение счета - бесплатно</div>
+</div>
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/add-card-advantage.svg"> </div>
+<div>Возможен выпуск дополнительных карт</div>
+</div>	
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/time-advantage.svg"> </div>
+<div>Срок действия - 3 года</div>
+</div>	
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/bonus-advantage.svg"> </div>
+<div>Бонусная программа</div>
+</div>	
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/money-advantage.svg"> </div>
+<div>Обслуживание - 2000 рублей за весь срок</div>
+</div>	
+
+<div class="card_charact_1"> 
+<div class="card_charact_1_img"> <img src="images-and-icons/SVG/card-transfer-advantage.svg"> </div>
+<div class="card_charact_1_width">Возможны переводы карта-карта</div>
+</div>	
+</div>
+</div>
+<!--Конец преимущества карт-->
+<!--Старт заказ карт-->
+<div class="order_card">
+<div class="order_inner">
+<div class="order_up">Как заказать карту</div>
+<div class="order_down">Заказать выпуск карты можно <a href="http://www.thbank.ru/" alt="Go to THB Bank">в офисах ТХБ</a> 
+	или с помощью <a href="http://www.thbank.ru/" alt="Go to THB Bank">онлайн формы</a> заказа</div>
+</div>
+</div>
+<!--Конец заказ карт-->
+<div class="lines_1">
+<svg width="100%" height="4">	
+<polyline points="-32 0,0 0" stroke-width="1" stroke="#fbb03b"/> 
+<polyline points="0 0,20 0" stroke-width="1" stroke="darkgreen"/> 
+<polyline points="60 0,130 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="130 0,180 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="200 0,240 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="240 0,255 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="255 0,280 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="280 0,330 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="370 0,390 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="390 0,450 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="450 0,490 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="490 0,530 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="530 0,550 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="570 0,630 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="630 0,690 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="690 0,730 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="730 0,745 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="745 0,780 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="780 0,830 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="830 0,850 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="870 0,890 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="890 0,920 0" stroke-width="1" stroke="darkgreen"/>
+<polyline points="920 0,950 0" stroke-width="1" stroke="#0d703f"/>
+<polyline points="950 0,980 0" stroke-width="1" stroke="#fbb03b"/>
+<polyline points="980 0,995 0" stroke-width="1" stroke="darkgreen"/>
+</svg>	
+</div>
+
+
+<!--Начало формы-->
+<div class="main_form">
+<div class="main_form_inner">
+<div class="forms">
+<div class="main_form_name">Заказать карту</div>	
+<label>
+<div class="card_option">Вид карты<span style="color:red; font-weight:bold;">*</span></div>
+<select id="vid">
+<option>Дебетовая VISA Gold</option>	
+<option>Дебетовая VISA Platinum</option>
+</select>
+<div class="address">Выбор офиса<span style="color:red; font-weight:bold;">*</span></div>
+<select id="address">
+<option>«На Юбилейной», Автозаводский район, Юбилейная, 31е</option>	
+<option>Головной офис, Центральный район, Горького, 96</option>
+<option>«На Матросова», Комсомольский район, Матросова, 25</option>	
+<option>«На Яшина», Автозаводский район, 40 лет Победы, 26</option>
+</select>
+
+<div class="fio">Ф.И.О.<span style="color:red; font-weight:bold;">*</span></div>
+<input id="fio" type="text" placeholder="">
+
+<div class="tel_form">Номер телефона<span style="color:red; font-weight:bold;">*</span></div>
+<input id="tel" type="text" placeholder="">
+
+<div class="email_form">E-mail<span style="color:red; font-weight:bold;">*</span></div>
+<input id="email" type="email" placeholder="">
+<div class="agree"><input type="checkbox"> Согласен с <a href="http://www.thbank.ru/" alt="Go to THB Bank">политикой конфиденциальности</a></div>
+</label>
+<div class="face_button_order">
+<div class="face_button_order_text">Заказать карту</div>
+</div>
+</div>
+
+
+</div>
+</div>
+<!--Конец формы-->
+<!--Старт заказ карт-->
+<div class="order_time">
+<div class="order_time_inner">
+<div class="time">Режим работы отдела банковских карт</div>
+<div class="table_wrapper">
+<div class="table_left">
+	 <table>
+            <caption>Обычное расписание</caption>
+            <tr>
+                <td>Понедельник-пятница</td>
+                <td>9:00-19:00(без перерыва)</td>
+            </tr>
+            <tr>
+                <td>Суббота</th>
+                <td>10:00-15:00</td>
+            </tr>
+            <tr>
+                <td>Воскресенье</td>
+                <td>Выходной</td>
+            </tr>
+</table>
+</div>
+<div class="table_right">
+	 <table>
+            <caption>В последний рабочий день месяца</caption>
+            <tr>
+                <td>Понедельник-пятница</td>
+                <td>9:00-18:00(без перерыва)</td>
+            </tr>
+            <tr>
+                <td>Суббота</th>
+                <td>10:00-14:00</td>
+            </tr>
+            <tr>
+                <td>Воскресенье</td>
+                <td>Выходной</td>
+            </tr>
+</table>
+</div>
+
+
+</div>
+</div>
+</div>
+<!--Конец заказ карт-->
+<!--Начало условий заказа карта-->
+<div class="conditions"> <a href="http://www.thbank.ru/" alt="Go to THB Bank">Условия и тарифы</a> по выпуску и обслуживанию банковских карт</div>
+<!--Конец условий заказа карта-->
+</div>
+</div>
+</div>
+<div>
+</div>
+</div>
+<!--Конец верхнего блока-->
+<footer>
+<div class="main_footer">
+<div class="footer_up">
+
+<div class="footer_up_left">
+<ul>
+<li><img src="images-and-icons/SVG/thb-logo-grey.svg" alt="Go to THB Bank"></li>
+<li>
+<!--First left ul start -->
+<ul class="footer_up_left_high">
+<li> 2010 © Тольяттихимбанк</li> 
+<li>Генеральная лицензия Банка России</li>
+<li> №2507 от 03.07.2015 года</li>
+</ul>
+<!--First left ul end -->
+</li>
+<li>
+<!--Second left ul start -->
+<ul class="footer_up_left_down">
+
+<li>Телефон +7 (8482) 71-81-71 </li>
+<li>Факс +7 (8482) 25-05-33</li>
+<li> info@thbank.ru</li>
+
+</li>
+
+</ul>
+<!--Second left ul end -->
+
+
+</ul>	
+</div>
+
+<div class="footer_up_center">
+<div class="center_up">
+<ul>
+<li>Юридическим лицам</li>
+<li>Расчетно-кассовые операции</li>
+<li>Кредитование</li>
+<li>Зарплатные проекты</li>
+<li>Депозит</li>	
+</ul>	
+</div>
+<div class="center_down">
+<ul>
+<li>Информация</li>
+<li>Офисы и банкоматы</li>
+<li>Контактная информация</li>
+<li>Политика конфеденциальности</li>
+</ul>
+</div>
 </div>	
 
 
+
+<div class="footer_up_right">
+<ul>
+<li>Физическим лицам</li>
+<li>Кредиты</li>
+<li>Вклады</li>
+<li>Банковские карты</li>
+<li>Переводы</li>
+<li>Обмен валют</li>
+<li>Аренда сейфов</li>
+<li>Инвестиционные монеты</li>
+<li>Условия и тарифы</li>	
+</ul>	
+</div>
+</div>
 </div>
 
+
+<div class="footer_down_wrapper">
+<div class="footer_down_inner">
+<div class="footer_down">
+<div>Сделано в <a href="http://weblime.ru/" alt="Go to Weblime">Веблайме</a></div>
+<div>
+<div class="icons">
+<div class="vk_icon"><a href="http://vk.com" alt="Go to VK"> <img src="images-and-icons/SVG/vk.svg"></a></div>
+<div class="facebook_icon"><a href="http://facebook.com" alt="Go to Facebook"> <img src="images-and-icons/SVG/fb.svg"></a></div>
+</div>
 </div>
 
+<div class="search_form">
+<form method="get" action="">
+<input type="text" value="" size="26"  style="
+height: 25px;
+width:206px;
+color: #808080;
+border: 1px solid #808080;
+background: url(images-and-icons/SVG/search.svg) no-repeat scroll 95% 50% #333333;">
+</form>
+
+</div>
 </div>
 
-</body>
+
+</div>
+</div>
 
 
-</html>
 
+</footer>
 
-
+</div>
+</html>	

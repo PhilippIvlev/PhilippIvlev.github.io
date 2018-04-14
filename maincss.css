@@ -1,0 +1,479 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;}
+/* Global */
+html{
+font-family: 'Open Sans', sans-serif;
+ font-size: 14px;    
+}
+a:hover {
+text-decoration: none;}
+/*Global end*/
+
+.wrapper{
+ height: 100vh;   
+}
+.header{
+min-height: 500px;
+width:100%;
+display:flex;
+justify-content:center;
+background-color:green;
+background-image:-moz-linear-gradient(45deg,#fbb03b,#83c222);
+background-image:-webkit-linear-gradient(45deg,#fbb03b,#83c222);
+background-image:-ms-linear-gradient(45deg,#fbb03b,#83c222);
+}
+.up{
+width:76%;
+}
+.menu{
+margin-top:23px;
+}
+.nav{
+min-width:100%;
+display:flex;
+align-items: center; 
+justify-content: space-between;}
+.nav li{
+display:flex;
+align-items: center;
+min-width:0px;
+min-height:60px;
+border:1px solid red;
+vertical-align: middle;
+max-width:100%}
+.nav a{
+color:white;
+font-size:15px;
+text-decoration:none;
+vertical-align: middle;}
+#tel_nav{font-size:24px;}
+.nav a:nth-child(1),.nav a:nth-child(2), .nav a:nth-child(3), .nav a:nth-child(4), .nav a:nth-child(5),
+.nav a:nth-child(6){border-bottom:1px solid transparent;}
+
+.nav a:nth-child(1):hover,.nav a:nth-child(2):hover,.nav a:nth-child(3):hover,.nav a:nth-child(4):hover,.nav a:nth-child(6):hover{
+border-bottom:1px solid white;}
+
+
+/*Стили карусели старт*/
+.face{
+    display:flex;
+    width:100%;
+    justify-content: flex-start;
+    align-items:center;
+    padding-top: 66px;
+}
+.face_text{
+ padding-top:0px;   
+ padding-right: 26px;
+line-height:1.3;}
+ .rider_pic{
+ padding-right: 37px;
+padding-left: 32px;
+padding-top: 35px}
+.face_button{
+min-height:60px; 
+width:220px;
+background-color:#0d703f; 
+border-radius: 10px;
+display:flex;
+justify-content:center;
+align-items:center;}
+.face_button_text{
+display:flex; 
+align-self: center;    
+font-size: 24px; 
+}
+
+.face_list li{color:white;}
+.face_list li:nth-child(1){
+font-size:55px;
+padding-top:9px;}
+.face_list li:nth-child(2){
+font-size:24px;
+padding-top:13px;
+padding-bottom:26px;}
+.face_list li:nth-child(3){
+font-size:24px;
+margin-top: 10px;}
+.face_text{
+min-width:450px;
+max-width:450px;}
+.face_text a{
+text-decoration: none;
+color:white;}
+
+.face_button:hover{
+background-color:#49aa43; }
+.mark{
+    display:inline-block; 
+width:6px;
+height:6px;
+background:white;
+border:3px solid white;
+border-radius:50%; 
+margin-right:7px;
+}
+.marks{padding-top:58px;}
+
+.left_arrow,.right_arrow{padding-bottom:0px;}
+.left_arrow:hover, .right_arrow:hover{
+background-color:#0d703f;}
+.open_button{
+    display:flex;
+    justify-content: center;
+    cursor: pointer;
+margin-top:100px;}
+/*Конец стилей карусели*/
+/*Старт стилей инфо о карте*/
+.card_wrapper{display:none;}
+.card_wrapper_inner{
+display:flex;  flex-direction:column;background-color:#f2f2f2;
+  width:100%;align-items:center;}
+  .card_links{
+  width:76%;}
+.name{
+font-size: 40px;color:#0d703f;
+padding-bottom: 40px; padding-top: 23px;}
+
+.card_with_photo_inner{display:flex; justify-content: center; align-items: center;}
+.card_with_photo{
+display:flex;
+width:100%;}
+.card_with_photo{
+display:flex; 
+background-color:green;
+background-image:-moz-linear-gradient(45deg,#fbb03b,#83c222);
+background-image:-webkit-linear-gradient(45deg,#fbb03b,#83c222);
+background-image:-ms-linear-gradient(45deg,#fbb03b,#83c222);
+margin-top:22px;
+border-radius: 10px;
+}
+.card_with_photo_photo{padding:56px;}
+.card_with_photo_text{
+font-size: 32px; color:white;
+line-height: 1.69;
+min-width:300px;max-width:451px;    
+}
+.fixed_menu_card_info{
+ display:flex;
+padding-bottom: 40px;
+padding-top: 35px;}
+.fixed_menu_card_info li:after{
+ content:">"; 
+ padding-left:6px;
+ padding-right:6px;}
+.fixed_menu_card_info li:last-child:after{
+ content:""; }
+ .inside_card_wrapper{
+display:flex; flex-direction:column;
+width:76%; background-color:white; align-items: center;
+border-radius: 10px;
+margin-bottom: 80px;}
+.inside_card_wrapper_width{
+width:94%;
+}
+
+
+.charac{
+display:flex;  
+flex-direction: column;
+}
+.charac_name{font-size:32px; color:#0d703f;padding-top: 27px;} 
+.charac8{display: flex; flex-wrap: wrap;}
+.card_charact_1{
+display:flex; flex-direction: column;
+width:205px;
+padding-top: 36px;
+padding-right:34px;
+padding-bottom: 0px}
+.card_charact_1_img{
+display: flex;
+align-items: center;
+min-height: 72px;
+padding-bottom: 40px;
+}
+.card_charact_1_width{
+width: 182px}
+/*Конец стилей инфо о карте*/
+/*Старт стилей особенности карт*/
+.order_card{
+    display: flex;
+    background-color: #f2f2f2;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+margin-top: 17px;}
+.order_inner{ 
+width:93%; }
+.order_up{
+padding-top: 39px;
+padding-bottom: 23px;
+font-size: 32px;
+color:#0d703f;  
+}
+.order_down{
+padding-bottom: 40px;color:#333333; 
+}
+.order_card a{border-bottom:2px solid #49aa43;color:#333333; text-decoration: none;}
+.order_card a:hover{color:#49aa43;}
+/*Конец стилей особенности карт*/
+/* Начало стилей формы*/
+.main_form{
+    display: flex;
+    justify-content: center;
+    border: 1px solid yellow;
+}
+.forms{
+display: flex;
+flex-direction: column;
+color:#333333;
+font-size:12px;}
+.main_form_name{
+font-size: 32px;
+color:#0d703f;
+padding-top: 50px;
+padding-bottom: 32px;
+}
+.main_form_inner{
+    display: flex;
+    width:100%;
+border:1px solid red;
+}
+select {
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;}
+select::-ms-expand {  /* для IE */ 
+display: none;}
+    /*for WebKit*/
+ input[type="text"]:focus { outline: none; }
+ input[type="email"]:focus { outline: none; } 
+ select:focus { outline: none; }    
+#vid{
+border-radius:8px;     
+height:52px;
+width:463px;
+background: url(images-and-icons/SVG/arrow-dropdown-down.svg) no-repeat scroll 95% 50%;}
+#address{
+border-radius:8px;     
+height:52px;
+width:463px;
+background: url(images-and-icons/SVG/arrow-dropdown-down.svg) no-repeat scroll 95% 50%;}
+.address, .fio, .tel_form, .email_form{padding-top:19px;}
+#fio{
+border-radius:8px;     
+height:48px;
+width:450px;}
+.card_option{
+padding-top: 3px;    
+}
+#tel{
+border-radius:8px;     
+height:48px;
+width:450px;}
+#email{
+border-radius:8px;     
+height:48px;
+width:450px;}
+.agree a{
+border-bottom:2px solid #49aa43;color:#333333; text-decoration: none;}
+.agree a:hover{color:#0d703f;}
+input{font-size:14px;
+padding-left: 10px;}
+.face_button_order{margin-bottom: 38px; margin-top:26px; width:201px; height:50px; 
+background-color:#0d703f;  color:white;border-radius: 10px;display: flex;
+align-items: center;justify-content: center;}
+.face_button_order_text{font-size: 20px;}
+.face_button_order:hover{background-color:#49aa43;}
+/* Конец стилей формы*/
+/*Начало стилей времени работы*/
+.order_time{
+    display: flex;
+    background-color: #f2f2f2;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+margin-bottom: 40px;}
+.order_time_inner{ 
+width:93%; }
+.time{
+padding-top: 59px;
+padding-bottom: 23px;
+font-size: 32px;
+color:#0d703f;  }
+.table_wrapper{
+display:flex;   
+width:100%;}
+.order_time caption{
+text-align: left;
+font-size: 20px;
+color:#0d703f;
+padding-bottom: 2px;}
+.table_left, .table_right{
+width:50%;}
+.table_wrapper td, .table_wrapper tr{
+padding:0px;
+font-size:16px;
+color:#333333;
+padding-top:20px;}
+.table_wrapper td{
+width:50%;}
+.table_right{
+border-left:2px solid #808080;
+padding-left: 5px;}
+.table_right{
+margin-left:31px;
+padding-left:29px;
+} 
+
+.table_wrapper{
+padding-bottom: 34px;   
+}
+/*Конец стилей времени работы*/
+
+/* Начало стилей условий заказа карт*/
+.conditions{ 
+color:#333333;
+padding-bottom:40px;}
+.conditions a{border-bottom:2px solid #49aa43;color:#333333; text-decoration: none;}
+.conditions a:hover{color:#49aa43;}
+/* Конец стилей условий заказа карт*/
+
+/* Cтили верхнего футера*/
+footer{
+background-color:#333333;
+color:#808080;}
+.main_footer{
+display:flex;
+flex-direction:column;
+min-width:100%
+justify-content:center;
+align-items:center;}
+
+.footer_up{
+display:flex;
+width:76%;
+justify-content:space-between;
+padding-top:80px;
+padding-bottom:80px;}
+.footer_up_left li{
+padding-bottom: 0px;}
+.footer_up_left_high, .footer_up_left_down {
+min-width:250px;
+padding-top: 38px;}
+.footer_up_center{ padding-right:9px; }
+.center_down{
+padding-top:38px;}
+.center_down li:nth-child(2),.center_down li:nth-child(3),.center_down li:nth-child(5), 
+.center_up li:nth-child(2),.center_up li:nth-child(3),.center_up li:nth-child(4){
+ padding-bottom:15px;}
+.center_up li:nth-child(1), .center_down li:nth-child(1){
+font-size: 16px;
+padding-bottom: 20px;
+font-weight: bold;}
+.footer_up_right li{
+padding-bottom:15px;}
+.footer_up_right li:nth-child(1){
+font-size: 16px;
+padding-bottom: 20px;
+font-weight: bold;}
+.footer_up_right li:last-child{
+padding-bottom:0px;}
+.footer_up_right{
+padding-right:142px;   
+}
+/* Конец стилей верхнего футера*/
+/*Стили футера старт*/
+.footer_down_wrapper{
+min-width:80%;
+display:flex;
+justify-content: center;
+align-items: center;
+border-top:2px solid #808080;
+}
+.footer_down_inner{
+display:flex;  align-items: center; justify-content:space-between; width:76%; 
+}
+.footer_down{
+display:flex;
+width:100%;
+justify-content:space-between;
+padding-top:14px;
+padding-bottom: 30px; 
+align-items: flex-end;
+}
+.footer_down a{
+color:#808080;
+text-decoration:underline;
+}
+.footer_down a:hover{color:#49aa43;}
+.icons{
+display: flex;
+justify-content: space-around;
+min-width:70px;
+padding-left:77px;
+}
+.icons li{
+   padding-right:20px; 
+   vertical-align: middle;
+   text-align: middle;
+}
+.icons img{
+vertical-align: middle;
+text-align: middle;
+}
+.search_form{
+width:200px;
+height:25px; 
+padding-right: 11px;   
+}
+/*Стили футера конец*/
+
+.lines svg{
+overflow:visible
+}
