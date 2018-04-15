@@ -396,7 +396,6 @@ width:463px;
 font-size:14px; 
 text-indent: 19px;
 margin-top:6px;}
-}
 
 /*Начало стилей времени работы*/
 .order_time{
@@ -461,7 +460,7 @@ color:#808080;}
 .main_footer{
 display:flex;
 flex-direction:column;
-min-width:100%
+min-width:100%;
 justify-content:center;
 align-items:center;}
 
@@ -530,16 +529,18 @@ padding-left:77px;
 }
 .icons li{
    padding-right:20px; 
-   vertical-align: middle;
-   text-align: middle;
-}
+   vertical-align: middle;}
 .icons img{
-vertical-align: middle;
-text-align: middle;
-}
+vertical-align: middle;}
 .search_form{
 width:200px;
 height:25px; 
 padding-right: 11px;   
 }
 /*Стили футера конец*/
+
+@media screen and (min-height: 768px) 
+{
+    html {
+        position: absolute;
+}}
