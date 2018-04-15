@@ -2,7 +2,7 @@
 <meta charset="UTF-8">
 <html lang="ru">
 <meta charset="utf-8">
-<meta content="width=1024" name="viewport">
+<meta name="viewport" content="width=device-width">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 <link rel="stylesheet" href="maincss.css">
 <html>  
@@ -16,6 +16,20 @@
 <meta name="theme-color" content="#ffffff">
 <title>(ТХБ)ТОЛЬЯТТИХИМБАНК</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+
+<script>
+ $(function(){
+ $(window).scroll(function() {
+ if($(this).scrollTop() >= 400) {
+ $('.menu').addClass('fixed');
+ }
+ else{
+ $('.menu').removeClass('fixed');}
+ });
+});
+</script>
+
 <script> 
 $(document).ready(function() {
 $('.open_button_inner').click(function(evt) {
@@ -25,6 +39,36 @@ $('.open_button_inner').click(function(evt) {
   }); // окончание click
 }); // окончание ready
 </script>
+<script>
+$(document).ready(function() {
+$("#signup").validate({
+rules: {
+email: {
+required: true,
+email: true
+},
+tel: {
+required:true,
+rangelength:[6,12]
+},
+}, //конец rules
+messages:{
+email:{
+required: "Введите адрес электронной почты.",
+email: "Это некорректный адрес электронной почты."	
+},
+tel:{
+required: "Введите телефон",
+rangelength:"Телефон должен содежать от 6 до 12 символов."
+}
+
+} //конец messages	
+}); // конец validate
+}); // end ready
+</script>
+
+
+
 
 </head>
 
@@ -76,17 +120,17 @@ $('.open_button_inner').click(function(evt) {
 <div class="card_wrapper_inner">
 <div class="card_links">
 <ul class="fixed_menu_card_info">
-<li>Главная страница</li>
-<li>Физическим лицам</li>
-<li>Банковские карты</li>
-<li>Дебетовая карта VISA Gold</li>
+<li><a href="http://www.thbank.ru/" alt="Go to THB Bank">Главная страница</a></li>
+<li><a href="http://www.thbank.ru/" alt="Go to THB Bank">Физическим лицам</a></li>
+<li><a href="http://www.thbank.ru/" alt="Go to THB Bank">Банковские карты</a></li>
+<li><a href="http://www.thbank.ru/" alt="Go to THB Bank">Дебетовая карта VISA Gold</a></li>
 </ul>
 </div>
 <div class="inside_card_wrapper">
 <div class="inside_card_wrapper_width">
 <div class="name"><h1> Дебетовая карта VISA Gold</h1> </div>
 
-<div class="lines_1">
+<div class="lines_0">
 <svg width="100%" height="4">	
 <polyline points="-32 0,0 0" stroke-width="1" stroke="#fbb03b"/> 
 <polyline points="0 0,20 0" stroke-width="1" stroke="darkgreen"/> 
@@ -134,17 +178,17 @@ $('.open_button_inner').click(function(evt) {
 <div class="card_charact_1_text">Платежная система VISA</div>
 </div>
 
-<div class="card_charact_1"> 
+<div class="card_charact_2"> 
 <div class="card_charact_1_img"> <img src="images-and-icons/SVG/foreign-currency-advantage.svg"> </div>
 <div>Валюта счета - рубль, доллар, евро</div>
 </div>
 
-<div class="card_charact_1"> 
+<div class="card_charact_3"> 
 <div class="card_charact_1_img"> <img src="images-and-icons/SVG/add-funds-advantage.svg"> </div>
 <div>Пополнение счета - бесплатно</div>
 </div>
 
-<div class="card_charact_1"> 
+<div class="card_charact_4"> 
 <div class="card_charact_1_img"> <img src="images-and-icons/SVG/add-card-advantage.svg"> </div>
 <div>Возможен выпуск дополнительных карт</div>
 </div>	
@@ -154,17 +198,17 @@ $('.open_button_inner').click(function(evt) {
 <div>Срок действия - 3 года</div>
 </div>	
 
-<div class="card_charact_1"> 
+<div class="card_charact_2"> 
 <div class="card_charact_1_img"> <img src="images-and-icons/SVG/bonus-advantage.svg"> </div>
 <div>Бонусная программа</div>
 </div>	
 
-<div class="card_charact_1"> 
+<div class="card_charact_3"> 
 <div class="card_charact_1_img"> <img src="images-and-icons/SVG/money-advantage.svg"> </div>
 <div>Обслуживание - 2000 рублей за весь срок</div>
 </div>	
 
-<div class="card_charact_1"> 
+<div class="card_charact_4"> 
 <div class="card_charact_1_img"> <img src="images-and-icons/SVG/card-transfer-advantage.svg"> </div>
 <div class="card_charact_1_width">Возможны переводы карта-карта</div>
 </div>	
@@ -216,9 +260,9 @@ $('.open_button_inner').click(function(evt) {
 <div class="main_form_inner">
 <div class="forms">
 <div class="main_form_name">Заказать карту</div>	
-<label>
+<form method="post" name="signup" id="signup">
 <div class="card_option">Вид карты<span style="color:red; font-weight:bold;">*</span></div>
-<select id="vid">
+<select name="card" id="card" class="required" title="Выберите планету">
 <option>Дебетовая VISA Gold</option>	
 <option>Дебетовая VISA Platinum</option>
 </select>
@@ -229,20 +273,24 @@ $('.open_button_inner').click(function(evt) {
 <option>«На Матросова», Комсомольский район, Матросова, 25</option>	
 <option>«На Яшина», Автозаводский район, 40 лет Победы, 26</option>
 </select>
-
+<div>
 <div class="fio">Ф.И.О.<span style="color:red; font-weight:bold;">*</span></div>
-<input id="fio" type="text" placeholder="">
-
-<div class="tel_form">Номер телефона<span style="color:red; font-weight:bold;">*</span></div>
-<input id="tel" type="text" placeholder="">
-
-<div class="email_form">E-mail<span style="color:red; font-weight:bold;">*</span></div>
-<input id="email" type="email" placeholder="">
-<div class="agree"><input type="checkbox"> Согласен с <a href="http://www.thbank.ru/" alt="Go to THB Bank">политикой конфиденциальности</a></div>
-</label>
-<div class="face_button_order">
-<div class="face_button_order_text">Заказать карту</div>
+<input name="name" type="text" id="name" class="required" title="Введите свое имя.">
 </div>
+<div>
+<div class="tel_form">Номер телефона<span style="color:red; font-weight:bold;">*</span></div>
+<input name="tel" type="text" id="tel" class="required" title="Введите свой телефон.">
+</div>
+<div>
+<div class="email_form">E-mail<span style="color:red; font-weight:bold;">*</span></div>
+<input name="email" type="text" id="email">
+</div>
+<div class="agree"><input type="checkbox"> Согласен с <a href="http://www.thbank.ru/" alt="Go to THB Bank">политикой конфиденциальности</a></div>
+<div class="order_button">
+<input type="submit" name="submit" id="submit" value="Заказать карту">
+</div>
+
+</form>
 </div>
 
 
