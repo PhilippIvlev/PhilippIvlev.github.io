@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyNew | Orders | DigiFabster</title>
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/icon">
+    <link rel="icon" href="static/img/favicon.ico" type="image/icon">
+    <link href="static/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <script src="static/js/3rd_party/jquery-1.11.2.min.js"></script>
+<link src="static/css/jquery-ui.min.css" rel="stylesheet">
+<script src="static/js/jquery-ui.min.js" </script>
+
+    <link href="https://file.myfontastic.com/MQTS9DTC6JbQPtajdCoeHT/icons.css" rel="stylesheet">
+    <script src="static/js/Popper.js"></script>
+    <script src="static/js/3rd_party/clipboard.min.js"></script>
+
+    <link href="static/css/animate.css" rel="stylesheet">
+    <link href="static/css/custom-scroll.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <script src="static/js/3rd_party/bootstrap.min.js"></script>
+
+
+    <script src="static/js/module.js"></script>
+    <script src="static/js/3rd_party/highlighter.js"></script>
+    <script src="static/js/highlighter_init.js"></script>
+
+
+
+
+        <style>
+            #change_form_wrapper { display: none; }
+        </style>
+    
+    <script>
+        $(document).ready(function () {
+            var clipboard = new Clipboard(document.querySelectorAll('.copy_button'));
+
+            clipboard.on('success', function(e) {
+                Common.successBtn($(e.trigger), "Copied!");
+                e.clearSelection();
+            });
+}); // end document.ready
+    </script>
+
+<script>
+$("#open_price_here").keyup(function () {
+var value = $(this).val();
+$("#here_price").text(value);
+}).keyup();
+</script>
+
+
+
+<script>
+$(function(){
+ $('.open_price').dialog({
+    autoOpen:false,
+    resizable: false,
+    draggable:true,
+    stack: true,
+    width:227,
+    height:253,
+    position: {
+    my: 'left+35 top-6',
+    at: 'right top', 
+    of: '.f2_block'}
+});
+$(".f2_block").on("click", function() {
+$(".open_price").dialog("open");
+$("#apply_price").on("click", function() {
+$(".open_price").dialog("close");
+});
+});
+})
+</script>
+<script>
+$(function(){
+ $('.open_price_abandoned').dialog({
+    autoOpen:false,
+    resizable: false,
+    draggable:true,
+    stack: true,
+    width:227,
+    height:253,
+    position: {
+    my: 'left+35 top-6',
+    at: 'right top', 
+    of: '.f2_block_abandoned'}
+});
+
+$(".f2_block_abandoned").on("click", function() {
+$(".open_price_abandoned").dialog("open");
+$("#apply_price_abandoned").on("click", function() {
+$(".open_price_abandoned").dialog("close");
+});
+});
+})
+</script>
+<script>
+$(function(){
+ $('.open_date').dialog({
+    autoOpen:false,
+    resizable: false,
+    draggable:true,
+    stack: true,
+    width:227,
+    height:253,
+    position: {
+    my: 'left-100 top-6',
+    at: 'right top', 
+    of: '.f1_block'}
+});
+$(".f1_block").on("click", function() {
+$(".open_date").dialog("open");
+$("#apply_date").on("click", function() {
+$(".open_date").dialog("close");
+});
+});
+})
+</script>
+<script>
+$(function(){
+ $('.open_date_abandoned').dialog({
+    autoOpen:false,
+    resizable: false,
+    draggable:true,
+    stack: true,
+    width:227,
+    height:253,
+     position: {
+    my: 'left-100 top-6',
+    at: 'right top', 
+    of: '.f1_block_abandoned'}
+});
+
+$(".f1_block_abandoned").on("click", function() {
+$(".open_date_abandoned").dialog("open");
+$("#apply_date_abandoned").on("click", function() {
+$(".open_date_abandoned").dialog("close");
+});
+});
+})
+</script>
+<script>
+$(function(){
+ $('.open_status').dialog({
+    autoOpen:false,
+    resizable: false,
+    draggable:true,
+    stack: true,
+    width:220,
+    height:437,
+    position: {
+    my: 'left+300 top-6',
+    at: 'right top', 
+    of: '.f3_block'}
+
+});
+$(".f3_block").on("click", function() {
+$(".open_status").dialog("open");
+$("#apply_status").on("click", function() {
+$(".open_status").dialog("close");
+});
+});
+})
+</script>
+    
+    <link rel="stylesheet" href="static/css/plugins/bootstrap-datepicker3.css"/>
+    <link rel="stylesheet" href="static/css/plugins/awesome-bootstrap-checkbox.css"/>
+
+    <script src="static/js/3rd_party/bootstrap-datepicker.min.js"></script>
+    <script src="static/js/3rd_party/plugins/jquery.numeric.min.js"></script>
+
+</head>
+<body>
+    
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NVVQV2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NVVQV2');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+    
+<script type="application/javascript">
+    dataLayer.push({
+        event: "User_init",
+        user_id: "37",
+        name: "Dmitrii Vlasov",
+        email: "1white@list.ru",
+        company: {
+            id: "4taps_newms86",
+            name: "Digifabster Test",
+            created_at: "Dec. 16, 2016, 5:52 p.m.",
+            plan: "Starter Archived July 2018 month",
+            monthly_spend: "60.000000"
+        }
+    });
+</script>
+    
+
+<div id="wrapper">
+    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary"><i class="fa fa-bars"></i></a>
+    
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav left_list" id="side-menu">
+                    <li class="nav-header">
+                        <div class="nav-logo-header">
+                            <img src="static/img/white-df-logo.png" />
+                        </div>
+                        <div class="dropdown profile-element">
+
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Dmitrii Vlasov</strong>
+                                 </span> <span class="text-muted text-xs block">Digifabster Test<b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+    
+    
+                                <li><a href="/manage/logout/">Logout</a></li>
+                            </ul>
+                        </div>
+                 
+                    </li>
+                    <li  class="active" >
+                        <a href="/manage/orders/"><i class="fa fa-credit-card"></i><span class="nav-label">Orders</span></a>
+                    </li>
+                    <li >
+                        <a href="/manage/models/"><i class="fa fa-cubes"></i><span class="nav-label">Models</span></a>
+                    </li>
+                    <li >
+                        <a href="/manage/clients/"><i class="fa fa-users"></i><span class="nav-label">Clients</span></a>
+                    </li>
+                    <li >
+                        <a href="/manage/materials/"><i class="fa fa-tasks"></i><span class="nav-label">Printers & Materials</span></a>
+                    </li>
+                    <li >
+                        <a href="/manage/discounts/">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="nav-label">Discounts</span>
+                            
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/manage/install_widget/"><i class="fa fa-code"></i><span class="nav-label">Install widget</span></a>
+                    </li>
+                    <li>
+            <a href="/manage/inhouse/4taps_newms86/" target="_blank"><i class="fa fa-upload"></i><span class="nav-label">Quotation Tool</span>
+                            
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/manage/company/"><i class="fa fa-cog"></i><span class="nav-label">Settings</span></a>
+                    </li>
+                    <li >
+                        <a href="/manage/personal/"><i class="fa fa-user"></i><span class="nav-label">Personal Info</span></a>
+                    </li>
+                    <li >
+                        <a href="/manage/billing/"><i class="fa fa-credit-card"></i><span class="nav-label">Billing</span></a>
+                    </li>
+                    <li >
+                        <a href="/manage/features/"><i class="fa fa-star"></i><span class="nav-label">Advanced features</span></a>
+                    </li>
+                    <li >
+                        <a href="http://help.digifabster.com/" target="_blank"><i class="fa fa-life-ring"></i><span class="nav-label">Help</span></a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </nav>
+
+
+    
+             <!--  
+        <div class="alert-container">
+            <div class="alert alert-ibox-styled alert-warning">
+                
+     
+                    <div>
+                        – Review payment options. We recommend using PayPal or Stripe payment options for your customers, currently you use Other payment (outside DigiFabster&#39;s purview).<br/>
+                        It may be changed on Finance tab of
+                        <a href="/manage/company/" target="_blank">Company page</a>.
+                        <a href="" class="notification_accept_link" data-accept_type="payment_method" data-company_id="75" data-accept_url="/accept_terms/">Click to accept</a>
+                    </div>
+
+                
+            </div>
+        </div>
+                 -->   
+    
+<div id="page-wrapper" class="gray-bg orders_page" data-change_status_url="/manage/orders/change_status/">
+        <input type='hidden' name='csrfmiddlewaretoken' value='3g3lF64XePYfUcewSKEClCysB0bgGEQX' />
+        <div class="wrapper wrapper-content animated fadeInRight">
+        
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox">
+                        <div class="ibox-content normalize_ibox">
+      
+                 <div class="header row header_orders_list">   <h1>Orders</h1> 
+
+
+                         <input id="open_price_here" type="text">
+
+<p id="here_price" style="width: 50px;height: 50px; background-color: pink"></p>
+
+</div>
+                    
+                      
+
+<nav>
+  <div class="nav nav-tabs row" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="margin-left:20px">Orders</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" style="margin-left:11px">Abandoned carts</a>
+  </div>
+</nav>
+
+
+ <input type="hidden" name="sorting" value="date"/>
+<input type="hidden" name="order" value="desc"/>
+<div class="tab-content" id="tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+ 
+<!-- начало фильтра-->
+
+
+
+<div class="row orders_wr">
+
+<div class="centering">
+<div class="filter">
+
+  <div class="left_filter">
+  <div class="left_filter_inner"> 
+  <div class="f1_block"><span class="f1">Date: <span class="open_button_date"> Choose date</span></span></div>
+
+<div class="f2_block"><span class="f2">Price: <span class="open_button_price"> Choose price</span></span></div>
+
+<div class="f3_block"><span class="f3">Status: <span class="open_button_status"> Choose status</span></span></div>
+
+
+
+</div></div>
+
+<div class="right_filter">
+<div class="right_filter_inner row">
+
+   <div class="search_input_wrap flex-wrap col ">
+     <input style="width:320px;height:35px"; type="search" value=""
+    class="form-control"
+    data-id="id_search"
+    name="search"
+    placeholder="Search order by name or email"/>
+      </div>
+     <div class="col dropdown">   <button class="btn square global_font_for_btn" type="submit"><p>FIND</p></button></div>
+ 
+
+       
+</div>
+</div>
+</div>
+</div>
+
+<!-- конец фильтра-->
+<!-- начало кнопок-->
+
+<div class="centering">
+
+ <div class="d-flex justify-content-between filter_buttons">
+    
+       <div class="dropdown m-b-15" data-disable="close"> 
+     <form>
+      <button type="button" disabled class="btn square global_font set_status" style="height:35px; width:113px; background-color:#dddddd" data-toggle="dropdown" aria-expanded="false" id="set_status"><p>SET STATUS</p></button>
+   <div class="dropdown-menu dropdown-status">
+            <div class="form-group">
+                <label>Change status</label>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="waiting_for_review" checked=""
+                               data-display_name="Waiting for review" id="waiting_for_review" class="order_status" name="status">
+                        <label for="waiting_for_review">Waiting for review</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="placed" 
+                               data-display_name="Placed" id="placed" class="order_status" name="status">
+                        <label for="placed">Placed</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="waiting_for_payment" 
+                               data-display_name="Waiting for payment" id="waiting_for_payment" class="order_status" name="status">
+                        <label for="waiting_for_payment">Waiting for payment</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="paid" 
+                               data-display_name="Paid" id="paid" class="order_status" name="status">
+                        <label for="paid">Paid</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="manufacturing" 
+                               data-display_name="Manufacturing" id="manufacturing" class="order_status" name="status">
+                        <label for="manufacturing">Manufacturing</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="ready_for_shipping" 
+                               data-display_name="Ready for shipping" id="ready_for_shipping" class="order_status" name="status">
+                        <label for="ready_for_shipping">Ready for shipping</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="ready_for_pickup" 
+                               data-display_name="Ready for pickup" id="ready_for_pickup" class="order_status" name="status">
+                        <label for="ready_for_pickup">Ready for pickup</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="shipped" 
+                               data-display_name="Shipped" id="shipped" class="order_status" name="status">
+                        <label for="shipped">Shipped</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="delivered" 
+                               data-display_name="Delivered" id="delivered" class="order_status" name="status">
+                        <label for="delivered">Delivered</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="cancelled_by_user" 
+                               data-display_name="Cancelled by customer" id="cancelled_by_user" class="order_status" name="status">
+                        <label for="cancelled_by_user">Cancelled by customer</label>
+                    </div>
+                
+                    <div class="custom-radio d-b m-b-10">
+                        <input type="radio" value="cancelled_by_admin" 
+                               data-display_name="Cancelled by admin" id="cancelled_by_admin" class="order_status" name="status">
+                        <label for="cancelled_by_admin">Cancelled by admin</label>
+                    </div>
+                
+            </div>
+            <div>
+                <button class="btn square" data-save="data" data-model="order" id="save_status_button" disabled>Save</button>
+            </div>
+        </div>
+
+
+
+
+       </div>
+
+
+ <div>
+<button class="btn square global_font" style="height:35px; width:118px; background-color:#dddddd" type="submit"><p>FILTER ORDERS</p></button>
+ </div>
+
+   <div>
+         <button type="button" class="btn square global_font export_csv" style="width:118px; background-color:#dddddd"><p>EXPORT CSV</p></button>
+    </div>
+</div>
+</div>
+
+<!-- конец кнопок -->
+
+<!-- начало скрытых блоков-->
+
+
+<div class="centering">
+<div class="hidden_blocks">
+
+<div class="open_date">
+<div class="col-xs-12 field_label global_font_order_header_date">Date</div>
+
+
+ <div id="real_date_period_choices">
+<ul id="id_date_period" class="date_choose">
+<li> <input type="radio" name="date_period" id="id_date_period_0" value="today" ><label for="id_date_period_0">Today</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_1" value="1_week" ><label for="id_date_period_1">1 Week</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_2" value="1_month" ><label for="id_date_period_2">1 Month</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_3" value="1_year" ><label for="id_date_period_3">1 Year</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_4" value="all_the_time" ><label for="id_date_period_4">All the time</label></li>
+</ul></div>
+
+
+
+
+
+<div class="col-xs-12 date_range_input_wrap date_range">
+
+<hr style="margin:0">
+
+<div class="input-daterange input-group date_column" id="date_range_filter">
+
+<div class="global_font_order_header" style="padding-top: 20px">Choose period</div> 
+
+<div class="global_font_order">From</div>
+<input type="text" value="" class="input-sm form-control date_icon" data-id="id_date_from" name="date_from" style="width:181px; height:35px;margin-top: 5px;margin-bottom: 15px"/>
+                                          
+<div class="global_font_order">To</div>
+<input type="text" value="" class="input-sm form-control date_icon" data-id="id_date_to" name="date_to" style="width:181px; height:35px;margin-top: 5px;"/>
+<div>
+<button id="apply_date" type="button" class="btn square global_font" style="width:78px; height:35px; margin-top: 15px; background-color:#dddddd"><p>APPLY</p></button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+   <div class="open_price">
+                                            <div class="col-xs-12 field_label global_font_order_header">
+                                                Price
+                                            </div>
+                                            <div class="col-xs-12 price_range_wrap">
+                                                <div class="input-daterange  input-group price_column">
+                                                <div class="global_font_order">From</div>
+                                                    <input type="text" value="" 
+                                                           class="input-sm form-control price_from_input"
+                                                           data-id="id_price_from"
+                                                           name="price_from"  style="width:181px;height:35px;margin-top: 5px;margin-bottom: 15px"/>
+                                               
+                                                            <div class="global_font_order">To</div>
+
+                                                    <input type="text" value="" id="to_price"
+                                                           class="input-sm form-control price_to_input"
+                                                           data-id="id_price_to"
+                                                           name="price_to" style="width:181px;height:35px; margin-top:5px"/>
+                                                </div>
+                                            </div>
+<div>
+<button id="apply_price" type="button" class="btn square global_font" style="width:78px; height:35px; margin-top: 15px; background-color:#dddddd"><p>APPLY</p></button>
+</div>
+
+                                        </div>
+
+<div class="open_status">
+
+
+  <div class="col-xs-12 field_label global_font_order_header">Status</div>
+
+<div class="col-xs-12 filter_status_wrap">
+<div class="checkbox checkbox-primary checkbox-inline checkbox_open_status global_font_order">
+<input type="checkbox" id="id_status_all"><label for="id_status_all">All</label>
+</div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_waiting_for_review" value="waiting_for_review">
+<label for="id_status_waiting_for_review">Waiting for review</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_placed" value="placed">
+<label for="id_status_placed">Placed</label> </div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status"
+id="id_status_waiting_for_payment" value="waiting_for_payment">
+<label for="id_status_waiting_for_payment">Waiting for payment</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_paid" value="paid">
+<label for="id_status_paid">Paid</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_manufacturing" value="manufacturing">
+<label for="id_status_manufacturing">Manufacturing</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_ready_for_shipping" value="ready_for_shipping">
+<label for="id_status_ready_for_shipping">Ready for shipping</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_ready_for_pickup" value="ready_for_pickup">
+<label for="id_status_ready_for_pickup">Ready for pickup</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_shipped" value="shipped">
+<label for="id_status_shipped">Shipped</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_delivered" value="delivered">
+<label for="id_status_delivered">Delivered</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_cancelled_by_user" value="cancelled_by_user">
+<label for="id_status_cancelled_by_user">Cancelled by customer</label></div>
+                                                
+<div class="checkbox checkbox-primary checkbox-inline status_choices global_font_order">
+<input type="checkbox" name="status" id="id_status_cancelled_by_admin" value="cancelled_by_admin">
+<label for="id_status_cancelled_by_admin">Cancelled by admin</label></div>
+
+</div>
+<div>
+<button id="apply_status" type="button" class="btn square global_font" style="width:78px; height:35px; margin-top: 15px; background-color:#dddddd"><p>APPLY</p></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+<!-- конец скрытых блоков-->
+
+    <table class="full_size_table table table-accounting table_orders_lists p-15" style="font-size: 14px;font-weight: normal;line-height: 1;letter-spacing: 0.3px;color: #676767;">
+        
+        <thead class="sortable_headers"> 
+            <tr>
+<th width="4%">Set</th>
+                
+<th width="4%">Type</th>
+
+<th width="4%"> Number</th>
+                
+        <th width="12%" class="sortable active hidden-xs hidden-md hidden-sm ">                    
+<div style="display:flex"> <div><a  href="/manage/orders/?sorting=date&amp;order=asc">Order date</a></div>
+<div> <a class="sorting_icon desc" href="/manage/orders/?sorting=name&amp;order=asc"></a></div>
+<div style="width:43%""><a href="/manage/orders/?sorting=date&amp;order=asc"></a></div>
+       </div> </th>
+                
+        <th width="12%" class="sortable">
+<div style="display:flex"> <div><a href="/manage/orders/?sorting=name&amp;order=asc">Name</a></div>
+<div> <a class="sorting_icon desc" href="/manage/orders/?sorting=name&amp;order=asc"></a></div>
+<div style="width:60%""><a href="/manage/orders/?sorting=date&amp;order=asc"></a></div>
+        </th>
+                
+<th width="16%" class="">Email</th>
+                
+         <th width="8%" class="sortable">
+<div style="display:flex"> <div> <a ref="/manage/orders/?sorting=full_price&amp;order=asc">Price</a></div>
+<div> <a class="sorting_icon desc" href="/manage/orders/?sorting=full_price&amp;order=asc"></a></div>
+<div style="width:45%""><a href="/manage/orders/?sorting=date&amp;order=asc"></a></div>
+</th>
+                
+        <th width="8%" class="sortable hidden-xs hidden-sm ">
+                        
+<div style="display:flex; justify-content: flex-end;">
+<div style="width:43%""><a href="/manage/orders/?sorting=date&amp;order=asc"></a></div>
+ <div> <a href="/manage/orders/?sorting=status&amp;order=asc">Status</a></div>
+<div style="width:10px"> <a class="sorting_icon desc" href="/manage/orders/?sorting=status&amp;order=asc"></a></div>
+
+        </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+        
+            
+                <tr class="order-row " >
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="253m" value="253" class="order_checkbox">
+                            <label for="253m"></label>
+                        </div></td>
+<td><div class="table_type_quick"><div class="table_type_inner">QUICK-QUOTE</div></div></td>
+                    <td><a href="/manage/orders/253">4</a></td>
+                    <td class="hidden-xs hidden-md hidden-sm">Feb. 24, 2017, 2:21 p.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span>16721.60</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="253">Not finished</td>
+
+                </tr>
+                
+                
+                
+            
+                <tr class="order-row" data-content="Waiting">
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="213m" value="213" class="order_checkbox">
+                            <label for="213m"></label>
+                        </div>
+                    </td>
+<td><div class="table_type_self"><div>SELF-CHECKOUT</div></div></td>
+                    <td><a href="/manage/orders/213">3</a></td>
+                    <td class="hidden-xs hidden-md hidden-sm">Dec. 23, 2016, 12:46 a.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span>658.13</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="213">Waiting for review</td>
+
+                </tr>
+                
+                
+                
+            
+                <tr class="order-row " >
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="212m" value="212" class="order_checkbox">
+                            <label for="212m"></label>
+                        </div></td>
+<td><div class="table_type_quick"><div class="table_type_inner">QUICK-QUOTE</div></div></td>
+                    <td><a href="/manage/orders/212">2</a></td>
+                    <td class="hidden-xs hidden-md hidden-sm">Dec. 23, 2016, 12:33 a.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span>787.50</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="212">Paid</td>
+
+                </tr>
+
+
+
+                
+                    <tr class="order-row " >
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="211m" value="211" class="order_checkbox">
+                            <label for="211m"></label>
+                        </div></td>
+                                    <td><div class="table_type_self"><div>SELF-CHECKOUT</div></div></td>
+                    <td><a href="/manage/orders/213">3</a></td>
+
+                    <td class="hidden-xs hidden-md hidden-sm">Dec. 23, 2016, 12:46 a.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span>658.13</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="213">Delivered</td>
+
+                </tr>
+                
+
+                    <tr class="order-row " >
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="210m" value="210" class="order_checkbox">
+                            <label for="210m"></label>
+                        </div></td>
+<td><div class="table_type_quick"><div class="table_type_inner">QUICK-QUOTE</div></div></td>
+                    <td><a href="/manage/orders/212">2</a></td>
+
+                    <td class="hidden-xs hidden-md hidden-sm">Dec. 23, 2016, 12:33 a.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span>787.50</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="212">Paid</td>
+
+                </tr>
+                
+            
+        </tbody>
+    </table>
+
+    <div class="mobile_list">
+        
+        <div class="mobile_block">
+            <div class="custom-checkbox" style="margin-bottom: 10px;">
+                <input type="checkbox"  id="377" value="377" class="order_checkbox">
+                <label for="377"></label>
+            </div>
+            <a style="font-size: 18px;" href="/manage/orders/377">103</a>
+            <p>July 23, 2018, 11:29 p.m.</p>
+            <p>Dmitrii Vlasov</p>
+            <p><a href="mailto:1white@list.ru">1white@list.ru</a></p>
+            <p><span class='added_currency_sign'>€</span><span>769.93</span></p>
+            <p class="order_status_title" data-order_id="377">Paid</p>
+        </div>
+    
+
+    
+        <div class="mobile_block">
+            <div class="custom-checkbox" style="margin-bottom: 10px;">
+                <input type="checkbox"  id="253" value="253" class="order_checkbox">
+                <label for="253"></label>
+            </div>
+            <a style="font-size: 18px;" href="/manage/orders/253">4</a>
+            <p>Feb. 24, 2017, 2:21 p.m.</p>
+            <p>Dmitry Vlasov</p>
+            <p><a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a></p>
+            <p><span class='added_currency_sign'>€</span><span>16721.60</span></p>
+            <p class="order_status_title" data-order_id="253">Not finished</p>
+        </div>
+    
+        <div class="mobile_block">
+            <div class="custom-checkbox" style="margin-bottom: 10px;">
+                <input type="checkbox"  id="213" value="213" class="order_checkbox">
+                <label for="213"></label>
+            </div>
+            <a style="font-size: 18px;" href="/manage/orders/213">3</a>
+            <p>Dec. 23, 2016, 12:46 a.m.</p>
+            <p>Dmitry Vlasov</p>
+            <p><a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a></p>
+            <p><span class='added_currency_sign'>€</span><span>658.13</span></p>
+            <p class="order_status_title" data-order_id="213">Delivered</p>
+        </div>
+    
+        <div class="mobile_block">
+            <div class="custom-checkbox" style="margin-bottom: 10px;">
+                <input type="checkbox"  id="212" value="212" class="order_checkbox">
+                <label for="212"></label>
+            </div>
+            <a style="font-size: 18px;" href="/manage/orders/212">2</a>
+            <p>Dec. 23, 2016, 12:33 a.m.</p>
+            <p>Dmitry Vlasov</p>
+            <p><a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a></p>
+            <p><span class='added_currency_sign'>€</span><span>787.50</span></p>
+            <p class="order_status_title" data-order_id="212">Paid</p>
+        </div>
+    
+    </div>
+
+                        </div>
+
+
+                    </div>
+
+
+<!-- Конец первой вкладки-->
+<!-- Начало второй вкладки-->
+
+
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<input type="hidden" name="sorting" value="date"/>
+<input type="hidden" name="order" value="desc"/>
+<div class="tab-content" id="tabContent">
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+
+<div class="row orders_wr">
+<div class="centering">
+<div class="filter_abandoned filter">
+
+
+  <div class="left_filter">
+  <div class="left_filter_inner"> 
+  <div class="f1_block_abandoned"><span class="f1">Date: <span class="open_button_date"> Choose date</span></span></div>
+
+<div class="f2_block_abandoned"><span class="f2">Price: <span class="open_button_price"> Choose price</span>
+</span></div>
+
+</div></div>
+
+<div class="right_filter">
+<div class="right_filter_inner row">
+
+   <div class="search_input_wrap flex-wrap col ">
+     <input style="width:320px; height:35px" type="search" value=""
+    class="form-control"
+    data-id="id_search"
+    name="search"
+    placeholder="Search order by name or email"/>
+      </div>
+     <div class="col">   <button class="btn square global_font_for_btn" type="submit"><p>FIND</p></button></div>
+ 
+
+       
+</div>
+</div>
+</div>
+</div>
+
+<!-- конец фильтра -->
+<!-- начало кнопок -->
+
+<div class="centering">
+ <div class="d-flex justify-content-end filter_buttons">
+    
+   <div>
+         <button type="button" class="btn square global_font export_csv" style="width:118px; background-color:#dddddd"><p>EXPORT CSV</p></button>
+    </div>
+</div>
+</div>
+
+<div class="centering">
+<div class="hidden_blocks">
+ 
+<div class="open_date_abandoned">
+<div class="col-xs-12 field_label global_font_order_header_date">Date</div>
+
+
+ <div id="real_date_period_choices">
+<ul id="id_date_period" class="date_choose">
+<li> <input type="radio" name="date_period" id="id_date_period_0" value="today" ><label for="id_date_period_0">Today</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_1" value="1_week" ><label for="id_date_period_1">1 Week</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_2" value="1_month" ><label for="id_date_period_2">1 Month</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_3" value="1_year" ><label for="id_date_period_3">1 Year</label></li>
+<li> <input type="radio" name="date_period" id="id_date_period_4" value="all_the_time" ><label for="id_date_period_4">All the time</label></li>
+</ul></div>
+
+
+
+
+
+<div class="col-xs-12 date_range_input_wrap date_range">
+<hr style="margin:0px">
+<div class="input-daterange input-group date_column" id="date_range_filter">
+
+<div class="global_font_order_header" style="padding-top: 20px">Choose period</div> 
+
+<div class="global_font_order">From</div>
+<input type="text" value="" class="input-sm form-control date_icon" data-id="id_date_from" name="date_from" style="width:181px; height:35px;margin-top: 5px;margin-bottom: 15px"/>
+                                          
+<div class="global_font_order">To</div>
+<input type="text" value="" class="input-sm form-control date_icon" data-id="id_date_to" name="date_to" style="width:181px; height:35px;margin-top: 5px;"/>
+<div>
+<button id="apply_date_abandoned" type="button" class="btn square global_font" style="width:78px; height:35px; margin-top: 15px; background-color:#dddddd"><p>APPLY</p></button>
+</div>
+</div>
+</div>
+</div>
+
+   <div class="open_price_abandoned">
+                                  <div class="col-xs-12 field_label global_font_order_header">
+                                                Price
+                                            </div>
+                                            <div class="col-xs-12 price_range_wrap" style="width:378px">
+                                                <div class="input-daterange  input-group price_column">
+                                                <div class="global_font_order">From</div>
+                                                    <input type="text" value=""
+                                                           class="input-sm form-control price_from_input"
+                                                           data-id="id_price_from"
+                                                           name="price_from"  style="width:181px;height:35px;margin-top: 5px;margin-bottom: 15px"/>
+                                               
+                                                            <div class="global_font_order">To</div>
+
+                                                    <input type="text" value=""
+                                                           class="input-sm form-control price_to_input"
+                                                           data-id="id_price_to"
+                                                           name="price_to" style="width:181px;height:35px; margin-top:5px"/>
+<div>
+<button id="apply_price_abandoned" type="button" class="btn square global_font" style="width:78px; height:35px; margin-top: 15px; background-color:#dddddd"><p>APPLY</p></button>
+</div>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+</form>
+</div>
+</div>
+
+<!-- конец скрытых блоков-->
+
+    <table class="full_size_table table table-accounting table_abandoned p-15" style="font-size: 14px;font-weight: normal;line-height: 1;letter-spacing: 0.3px;color: #676767;">
+        
+        <thead class="sortable_headers">
+            <tr>
+                <th width="4%">Set</th>
+
+<th width="16%" class="sortable active hidden-xs hidden-md hidden-sm ">                    
+<div style="display:flex"> <div><a  href="/manage/orders/?sorting=date&amp;order=asc">Order date</a></div>
+<div> <a class="sorting_icon desc" href="/manage/orders/?sorting=date&amp;order=asc"></a></div>
+
+       </div> </th>
+
+
+ <th width="16%" class="sortable">
+<div style="display:flex"> <div><a href="/manage/orders/?sorting=name&amp;order=asc">Name</a></div>
+<div> <a class="sorting_icon desc" href="/manage/orders/?sorting=name&amp;order=asc"></a></div>
+        </th>
+                
+                
+             <th width="16%">Email</th>
+                
+<th width="12%" class="sortable">
+<div style="display:flex"> <div> <a ref="/manage/orders/?sorting=full_price&amp;order=asc">Price</a></div>
+<div> <a class="sorting_icon desc" href="/manage/orders/?sorting=full_price&amp;order=asc"></a></div>
+</th>
+
+     <th width="12%" class="sortable hidden-xs hidden-sm ">               
+<div style="display:flex; justify-content: flex-end;"> <div> <a href="/manage/orders/?sorting=status&amp;order=asc">Reason</a></div>
+<div style="width:10px"> <a class="sorting_icon desc" href="/manage/orders/?sorting=status&amp;order=asc"></a></div>
+        </th>         
+
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+        
+            
+                <tr class="order-row " >
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="153m" value="153" class="order_checkbox">
+                            <label for="153m"></label></div></td>
+                
+                    <td class="hidden-xs hidden-md hidden-sm">Feb. 24, 2017, 2:21 p.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span class='any_price'>16721.60</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="253">The lead time is too long</td>
+
+                </tr>
+                
+                
+                
+            
+                <tr class="order-row " >
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="152m" value="152" class="order_checkbox">
+                            <label for="152m"></label>
+                        </div></td>
+                
+                    <td class="hidden-xs hidden-md hidden-sm">Dec. 23, 2016, 12:46 a.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span class='any_price'>658.13</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="213">The lead time is too long</td>
+
+                </tr>
+                
+                
+                
+            
+                <tr class="order-row " >
+                    <td>
+                        <div class="custom-checkbox">
+                            <input type="checkbox"  id="151m" value="151" class="order_checkbox">
+                            <label for="151m"></label>
+                        </div></td>
+        
+                    <td class="hidden-xs hidden-md hidden-sm">Dec. 23, 2016, 12:33 a.m.</td>
+                    <td>Dmitry Vlasov</td>
+                    <td class="hidden-xs">
+                        <a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a>
+                    </td>
+                    <td><span class='added_currency_sign'>€</span><span class='any_price'>787.50</span></td>
+                    <td class="hidden-xs hidden-sm order_status_title" data-order_id="212">The lead time is too long</td>
+
+                </tr>
+                
+                
+                
+            
+        </tbody>
+    </table>
+
+    <div class="mobile_list">
+        
+            <div class="mobile_block">
+            <div class="custom-checkbox" style="margin-bottom: 10px;">
+                <input type="checkbox"  id="413" value="413" class="order_checkbox">
+                <label for="413"></label>
+            </div>
+            <a style="font-size: 18px;" href="/manage/orders/213">5</a>
+            <p>Dec. 23, 2016, 12:46 a.m.</p>
+            <p>Dmitry Vlasov</p>
+            <p><a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a></p>
+            <p><span class='added_currency_sign'>€</span><span class='any_price'>658.13</span></p>
+            <p class="order_status_title" data-order_id="413">Delivered</p>
+        </div>
+    
+        <div class="mobile_block">
+            <div class="custom-checkbox" style="margin-bottom: 10px;">
+                <input type="checkbox"  id="412" value="412" class="order_checkbox">
+                <label for="412"></label>
+            </div>
+            <a style="font-size: 18px;" href="/manage/orders/412">6</a>
+            <p>Dec. 23, 2016, 12:33 a.m.</p>
+            <p>Dmitry Vlasov</p>
+            <p><a href="mailto:yablokoff.tlt@gmail.com">yablokoff.tlt@gmail.com</a></p>
+            <p><span class='added_currency_sign'>€</span><span class='any_price'>787.50</span></p>
+            <p class="order_status_title" data-order_id="412">Paid</p>
+        </div>
+    
+    </div>
+
+                        </div>
+
+
+                    </div>
+    
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+    
+<div class="modal modal-vcenter fade bs-example-modal-lg" id="initial_setup_start_popup" data-backdrop="static" data-keyboard="false" data-show="" tabindex="-1" role="dialog" aria-labelledby="deleteModal">
+    <div class="modal-dialog modal-md welcome-modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="90px" viewBox="0 0 81 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0-OnboardingWelcome" transform="translate(-660.000000, -91.000000)" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(410.000000, 51.000000)">
+                <g id="Group-2" transform="translate(250.000000, 40.000000)">
+                    <polygon id="Shape" fill="#F1E2E8" points="35.2508108 87.502139 35.1401351 47.9141711 0 27.7183155 0.121621622 69.3914439 35.2556757 89.5981283"></polygon>
+                    <path d="M44.1243243,47.8335561 L78.9482432,27.9505348 L80.7628378,26.9145722 L80.8808108,68.5744652 L44.2410811,89.5042781 L44.1243243,47.8335561 L44.1243243,47.8335561 Z M46.5604054,49.2244652 L46.6637838,85.3411765 L78.4447297,67.1871658 L78.3462162,31.0692513 L46.5604054,49.2244652 L46.5604054,49.2244652 Z" id="Shape" fill="#006CB0"></path>
+                    <path d="M4.54621622,20.9298128 L41.1859459,0 L76.3127027,20.1946524 L40.2786486,40.7755348 L39.6681081,41.1208556 L4.54621622,20.9298128 L4.54621622,20.9298128 Z M39.672973,39.7299465 L40.2835135,38.693984 L39.672973,39.7299465 L39.672973,39.7299465 Z M9.40135135,20.9334225 L39.672973,38.3426471 L71.4587838,20.1898396 L41.1822973,2.78061497 L9.40135135,20.9334225 L9.40135135,20.9334225 Z" id="Shape" fill="#006CB0"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                <h1>Welcome aboard, Dmitrii</h1>
+                <p>You have successfully registered Digifabster Test company from Germany. We’ve sent you e-mail with your registration information</p>
+                <div class="advantage-box">
+                    <h2>What advantages do you get?</h2>
+                    <div class="icon-row">
+                        <div class="icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>chevrons-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="0-OnboardingWelcome" transform="translate(-534.000000, -392.000000)" stroke-width="2" stroke="#007FD7">
+            <g id="Group-5" transform="translate(410.000000, 51.000000)">
+                <g id="Group-7" transform="translate(125.000000, 340.000000)">
+                    <g id="chevrons-up" transform="translate(0.000000, 2.000000)">
+                        <polyline id="Shape" points="16 7.77777778 8 0 0 7.77777778"></polyline>
+                        <polyline id="Shape" points="16 15.4666667 8 7.68888889 0 15.4666667"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></div>
+                        <div class="text">Increases repeat business with no service fee</div>
+                    </div>
+                    <div class="icon-row">
+                        <div class="icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>clock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="0-OnboardingWelcome" transform="translate(-534.000000, -440.000000)" stroke="#007FD7" stroke-width="2">
+            <g id="Group-5" transform="translate(410.000000, 51.000000)">
+                <g id="Group-7" transform="translate(125.000000, 340.000000)">
+                    <g id="clock" transform="translate(0.000000, 50.000000)">
+                        <circle id="Oval" cx="8" cy="8" r="8"></circle>
+                        <polyline id="Shape" points="8 3.2 8 8 10.4 10.4"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></div>
+                        <div class="text">Saves a tremendous amount of time by using instant quoting</div>
+                    </div>
+                    <div class="icon-row">
+                        <div class="icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>credit-card</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="0-OnboardingWelcome" transform="translate(-534.000000, -491.000000)" stroke="#007FD7" stroke-width="2">
+            <g id="Group-5" transform="translate(410.000000, 51.000000)">
+                <g id="Group-7" transform="translate(125.000000, 340.000000)">
+                    <g id="credit-card" transform="translate(0.000000, 101.000000)">
+                        <rect id="Rectangle-path" x="0" y="0" width="16" height="11.6363636" rx="2"></rect>
+                        <path d="M0,4.36363636 L16,4.36363636" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg></div>
+                        <div class="text">Get payments directly from your customers</div>
+                    </div>
+                </div>
+                <div class="welcome-footer"><p>Let's do a quick tour</p></div>
+                <button class="btn square btn-redirect" data-href="/manage/materials/">Start</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="modal modal-vcenter fade bs-example-modal-lg" id="initial_setup_finish_popup" data-backdrop="static" data-keyboard="false" data-show="" tabindex="-1" role="dialog" aria-labelledby="deleteModal">
+    <div class="modal-dialog modal-md setup-finish-modal">
+        <div class="modal-content">
+            <div class="close-button" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <g fill="none" fill-rule="evenodd" stroke="#676767" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)">
+        <circle cx="15" cy="15" r="15"/>
+        <path d="M19.5 10.5l-9 9M10.5 10.5l9 9"/>
+    </g>
+</svg>
+</div>
+            <div class="modal-body">
+                <?xml version="1.0" encoding="UTF-8"?>
+<svg width="105px" height="92px" viewBox="0 0 105 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-OnboardinngFinish" transform="translate(-648.000000, -102.000000)">
+            <g id="Group-8" transform="translate(410.000000, 62.000000)">
+                <g id="Group-7" transform="translate(55.000000, 40.000000)">
+                    <g id="Group" transform="translate(183.000000, 0.000000)">
+                        <path d="M96.2964348,59.9228402 C95.9766836,59.3449701 95.2484272,59.1343272 94.6684348,59.4519529 L91.1844348,61.3614408 C90.1524348,59.7233116 88.1844348,55.9741707 89.4324348,52.6619972 C90.9664348,48.5856294 84.9564348,38.6391325 77.5404348,27.0205865 L78.8864348,25.3265893 C78.930235,25.2723091 78.9690578,25.2142122 79.0024348,25.1529995 C80.3121244,23.035762 79.736274,20.2666361 77.6904348,18.8439076 C77.0956956,18.4786268 76.4377133,18.2275588 75.7504348,18.1036568 C76.5098646,16.1460432 75.8726232,13.9234011 74.1904348,12.6625139 C72.1470189,11.1236739 69.2507947,11.4660361 67.6244348,13.4386799 C67.2486166,12.7069951 66.7044297,12.0745188 66.0364348,11.593041 C64.892452,10.6724668 63.3974567,10.3069101 61.9564348,10.5953984 C61.871427,10.611366 61.7883135,10.6361075 61.7084348,10.669224 L59.9624348,11.4094748 C58.435485,9.80083227 55.963113,9.53776811 54.1304348,10.7889411 C53.3509504,11.3425871 52.7270268,12.0866449 52.3184348,12.949835 C50.9352718,10.795026 48.0903894,10.1194378 45.8824348,11.4214465 C43.6670035,12.7441063 42.901701,15.5809661 44.1524348,17.8342933 L44.4144348,18.3091711 C43.4551188,18.2114965 42.489844,18.4256518 41.6624348,18.9197284 C39.1974205,20.3160002 38.3260574,23.4365965 39.7124348,25.9032268 C40.4504348,27.2999264 41.4224348,29.115636 42.4824348,31.0909684 C42.1475901,31.4722513 41.8433189,31.8792138 41.5724348,32.3080924 C40.5524021,33.9718355 39.2151576,35.4198134 37.6364348,36.5700217 C37.4204348,36.5879793 36.7464348,36.6498331 36.5944348,36.5221348 C36.5704348,36.5001867 36.3604348,36.2966676 36.2704348,35.3808317 C37.2209971,32.3448116 37.8064378,29.2068253 38.0144348,26.0329203 C37.5224348,19.5761773 34.2784348,18.6503649 32.4624348,18.7261858 C29.2624348,18.798016 29.3284348,21.5555002 29.3604348,23.0360019 C29.4665904,23.7619347 29.3689768,24.5030162 29.0784348,25.176943 C27.4584348,27.2680019 21.8004348,40.8918095 23.2544348,46.3848298 C23.5884348,47.6418595 24.0864348,49.1782291 24.5744348,50.6866648 C25.1686949,52.3577006 25.6543684,54.0652143 26.0284348,55.7985856 L23.4284348,59.0089995 L21.8084348,57.6980971 C21.5598185,57.501102 21.2445695,57.407465 20.9284348,57.4367148 C20.6145153,57.4716531 20.3270628,57.6286623 20.1284348,57.8736822 L10.0784348,70.2444507 C9.87791397,70.4910429 9.7838041,70.8070083 9.81681107,71.1228288 C9.84981803,71.4386494 10.0072377,71.7284508 10.2544348,71.9284715 L34.6824348,91.6817954 C34.8962357,91.8547888 35.1631547,91.9491878 35.4384348,91.9491636 L35.5644348,91.9491636 C35.8783543,91.9142252 36.1658067,91.757216 36.3644348,91.5121961 L46.4144348,79.1414276 C46.6149556,78.8948355 46.7090655,78.5788701 46.6760585,78.2630495 C46.6430515,77.947229 46.4856319,77.6574276 46.2384348,77.4574069 L43.1304348,74.9652956 C44.2604348,73.3930108 47.0064348,70.162644 50.5444348,70.0628798 C52.0702002,69.8515293 53.4891603,69.1618886 54.5964348,68.0935332 C55.3980695,68.5077282 56.2598833,68.7938734 57.1504348,68.9415295 C58.4444348,69.1091334 60.0664348,69.2308458 61.6524348,69.3405865 C63.4223615,69.4218683 65.1852808,69.6158055 66.9304348,69.9212145 L68.9304348,73.5446525 L67.1004348,74.5422951 C66.5211992,74.8612926 66.3100586,75.5878322 66.6284348,76.1664573 L74.3144348,90.1214823 C74.4671606,90.399054 74.7238912,90.6049587 75.0284348,90.6941292 C75.137784,90.7247806 75.2508515,90.7402236 75.3644348,90.7400207 C75.5665654,90.7407465 75.765528,90.6899212 75.9424348,90.5923696 L103.504435,75.4840698 C104.08367,75.1650724 104.294811,74.4385328 103.976435,73.8599076 L96.2964348,59.9228402 Z" id="Path" fill="#F1E2E8"></path>
+                        <path d="M87.166,50.8139293 C86.8462488,50.2360592 86.1179924,50.0254163 85.538,50.343042 L82.054,52.2525299 C81.022,50.6144008 79.054,46.8652598 80.302,43.5530863 C81.836,39.4767185 75.826,29.5302216 68.41,17.9116756 L69.756,16.2176785 C69.7998003,16.1633982 69.838623,16.1053014 69.872,16.0440886 C71.1816896,13.9268511 70.6058392,11.1577252 68.56,9.7349967 C67.9652608,9.36971593 67.3072785,9.11864793 66.62,8.99474587 C67.3794298,7.03713233 66.7421884,4.81449024 65.06,3.55360302 C63.0165841,2.01476297 60.1203599,2.35712523 58.494,4.32976898 C58.1181818,3.59808422 57.573995,2.96560788 56.906,2.48413013 C55.7620172,1.56355586 54.2670219,1.19799923 52.826,1.48648751 C52.7409922,1.50245509 52.6578787,1.52719661 52.578,1.56031306 L50.832,2.30056388 C49.3050502,0.691921379 46.8326782,0.428857223 45,1.68003017 C44.2205156,2.23367616 43.596592,2.97773397 43.188,3.84092409 C41.804837,1.68611509 38.9599546,1.0105269 36.752,2.3125356 C34.5365687,3.63519541 33.7712662,6.47205521 35.022,8.72538237 L35.284,9.20026025 C34.324684,9.10258559 33.3594092,9.31674095 32.532,9.81081754 C30.0669857,11.2070894 29.1956226,14.3276856 30.582,16.7943159 C31.32,18.1910156 32.292,20.0067251 33.352,21.9820575 C33.0171554,22.3633404 32.7128841,22.7703029 32.442,23.1991815 C31.4219673,24.8629246 30.0847229,26.3109025 28.506,27.4611108 C28.29,27.4790684 27.616,27.5409222 27.464,27.413224 C27.44,27.3912758 27.23,27.1877567 27.14,26.2719208 C28.0905623,23.2359007 28.676003,20.0979144 28.884,16.9240094 C28.392,10.4672664 25.148,9.54145403 23.332,9.61727487 C20.132,9.68910514 20.198,12.4465893 20.23,13.927091 C20.3361556,14.6530238 20.238542,15.3941053 19.948,16.0680321 C18.328,18.159091 12.67,31.7828986 14.124,37.2759189 C14.458,38.5329486 14.956,40.0693182 15.444,41.5777539 C16.0382601,43.2487897 16.5239337,44.9563034 16.898,46.6896747 L14.298,49.9000886 L12.678,48.5891862 C12.4293838,48.3921911 12.1141347,48.2985541 11.798,48.3278039 C11.4840805,48.3627422 11.1966281,48.5197515 10.998,48.7647713 L0.948,61.1355398 C0.747479186,61.382132 0.653369321,61.6980974 0.686376286,62.0139179 C0.719383251,62.3297385 0.876802883,62.6195399 1.124,62.8195606 L25.552,82.5728845 C25.7658009,82.7458779 26.0327199,82.8402769 26.308,82.8402527 L26.434,82.8402527 C26.7479195,82.8053144 27.0353719,82.6483051 27.234,82.4032852 L37.284,70.0325167 C37.4845208,69.7859246 37.5786307,69.4699592 37.5456237,69.1541386 C37.5126167,68.8383181 37.3551971,68.5485167 37.108,68.348496 L34,65.8563847 C35.13,64.2841 37.876,61.0537331 41.414,60.9539689 C42.9397654,60.7426184 44.3587255,60.0529777 45.466,58.9846223 C46.2676347,59.3988173 47.1294485,59.6849625 48.02,59.8326186 C49.314,60.0002225 50.936,60.1219349 52.522,60.2316756 C54.2919267,60.3129574 56.054846,60.5068946 57.8,60.8123036 L59.8,64.4357416 L57.97,65.4333843 C57.3907645,65.7523817 57.1796238,66.4789213 57.498,67.0575464 L65.184,81.0125714 C65.3367258,81.2901432 65.5934564,81.4960478 65.898,81.5852183 C66.0073492,81.6158697 66.1204167,81.6313127 66.234,81.6311099 C66.4361306,81.6318356 66.6350932,81.5810103 66.812,81.4834587 L94.374,66.3751589 C94.9532355,66.0561615 95.1643762,65.3296219 94.846,64.7509967 L87.166,50.8139293 Z" id="Path" fill="#FFFFFF"></path>
+                        <path d="M87.166,50.8139293 C86.8462488,50.2360592 86.1179924,50.0254163 85.538,50.343042 L82.054,52.2525299 C81.022,50.6144008 79.054,46.8652598 80.302,43.5530863 C81.836,39.4767185 75.826,29.5302216 68.41,17.9116756 L69.756,16.2176785 C69.7998003,16.1633982 69.838623,16.1053014 69.872,16.0440886 C71.1816896,13.9268511 70.6058392,11.1577252 68.56,9.7349967 C67.9652608,9.36971593 67.3072785,9.11864793 66.62,8.99474587 C67.3794298,7.03713233 66.7421884,4.81449024 65.06,3.55360302 C63.0165841,2.01476297 60.1203599,2.35712523 58.494,4.32976898 C58.1181818,3.59808422 57.573995,2.96560788 56.906,2.48413013 C55.7620172,1.56355586 54.2670219,1.19799923 52.826,1.48648751 C52.7409922,1.50245509 52.6578787,1.52719661 52.578,1.56031306 L50.832,2.30056388 C49.3050502,0.691921379 46.8326782,0.428857223 45,1.68003017 C44.2205156,2.23367616 43.596592,2.97773397 43.188,3.84092409 C41.804837,1.68611509 38.9599546,1.0105269 36.752,2.3125356 C34.5365687,3.63519541 33.7712662,6.47205521 35.022,8.72538237 L35.284,9.20026025 C34.324684,9.10258559 33.3594092,9.31674095 32.532,9.81081754 C30.0669857,11.2070894 29.1956226,14.3276856 30.582,16.7943159 C31.32,18.1910156 32.292,20.0067251 33.352,21.9820575 C33.0171554,22.3633404 32.7128841,22.7703029 32.442,23.1991815 C31.4219673,24.8629246 30.0847229,26.3109025 28.506,27.4611108 C28.29,27.4790684 27.616,27.5409222 27.464,27.413224 C27.44,27.3912758 27.23,27.1877567 27.14,26.2719208 C28.0905623,23.2359007 28.676003,20.0979144 28.884,16.9240094 C28.392,10.4672664 25.148,9.54145403 23.332,9.61727487 C20.132,9.68910514 20.198,12.4465893 20.23,13.927091 C20.3361556,14.6530238 20.238542,15.3941053 19.948,16.0680321 C18.328,18.159091 12.67,31.7828986 14.124,37.2759189 C14.458,38.5329486 14.956,40.0693182 15.444,41.5777539 C16.0382601,43.2487897 16.5239337,44.9563034 16.898,46.6896747 L14.298,49.9000886 L12.678,48.5891862 C12.4293838,48.3921911 12.1141347,48.2985541 11.798,48.3278039 C11.4840805,48.3627422 11.1966281,48.5197515 10.998,48.7647713 L0.948,61.1355398 C0.747479186,61.382132 0.653369321,61.6980974 0.686376286,62.0139179 C0.719383251,62.3297385 0.876802883,62.6195399 1.124,62.8195606 L25.552,82.5728845 C25.7658009,82.7458779 26.0327199,82.8402769 26.308,82.8402527 L26.434,82.8402527 C26.7479195,82.8053144 27.0353719,82.6483051 27.234,82.4032852 L37.284,70.0325167 C37.4845208,69.7859246 37.5786307,69.4699592 37.5456237,69.1541386 C37.5126167,68.8383181 37.3551971,68.5485167 37.108,68.348496 L34,65.8563847 C35.13,64.2841 37.876,61.0537331 41.414,60.9539689 C42.9397654,60.7426184 44.3587255,60.0529777 45.466,58.9846223 C46.2676347,59.3988173 47.1294485,59.6849625 48.02,59.8326186 C49.314,60.0002225 50.936,60.1219349 52.522,60.2316756 C54.2919267,60.3129574 56.054846,60.5068946 57.8,60.8123036 L59.8,64.4357416 L57.97,65.4333843 C57.3907645,65.7523817 57.1796238,66.4789213 57.498,67.0575464 L65.184,81.0125714 C65.3367258,81.2901432 65.5934564,81.4960478 65.898,81.5852183 C66.0073492,81.6158697 66.1204167,81.6313127 66.234,81.6311099 C66.4361306,81.6318356 66.6350932,81.5810103 66.812,81.4834587 L94.374,66.3751589 C94.9532355,66.0561615 95.1643762,65.3296219 94.846,64.7509967 L87.166,50.8139293 Z M67.8,14.8209788 L67.042,15.7747251 C66.13,14.3381198 65.34,13.0731089 64.776,12.0994097 C64.744,12.0435417 64.7,12.0016407 64.666,11.947768 L65.192,11.2434323 C65.2932865,11.2734394 65.3983428,11.288892 65.504,11.2893239 C66.1311509,11.2695302 66.7500397,11.4362155 67.282,11.7681924 C68.2153285,12.5018087 68.4393015,13.8217736 67.8,14.8209788 Z M60.32,5.87611504 C61.1218077,4.87677689 62.5744367,4.69385899 63.6,5.46309099 C64.110886,5.84816308 64.4418076,6.42482939 64.516,7.05931919 C64.5916332,7.70589865 64.3978584,8.35510085 63.98,8.85507591 L62.86,10.3535351 C61.4638404,9.73493951 59.8562497,9.81416699 58.528,10.5670306 C57.8708168,10.9049513 57.3394958,11.4441106 57.012,12.1053956 L56.156,10.6987195 L60.32,5.87611504 Z M53.382,3.8129901 C54.1111629,3.69833831 54.8546103,3.90101496 55.424,4.36967468 C56.91,5.47905328 56.584,6.40087506 56.052,7.16307402 L54.852,8.55977369 L52.252,4.2998397 L53.382,3.8129901 Z M26.114,79.9690372 L3.55,61.7181631 L12.09,51.2070005 L34.654,69.4578746 L26.114,79.9690372 Z M43.236,57.7016539 C42.700689,58.1559514 42.0501846,58.4542019 41.356,58.5636172 C36.84,58.6893201 33.556,62.3985554 32.14,64.3499444 L16.154,51.4125149 L18.954,47.9706478 C19.658,47.1066893 19.354,45.8516549 17.73,40.8534653 C17.256,39.3909213 16.772,37.8964526 16.446,36.675338 C15.246,32.14205 20.494,19.292413 21.846,17.5405526 C22.524342,16.448994 22.8001593,15.1557089 22.626,13.8831947 C22.584,12.0395512 22.706,12.0355606 23.384,12.0195983 L23.444,12.0195983 C25.644,12.0195983 26.31,14.7850636 26.486,17.1155568 C26.2387408,20.0737452 25.6632192,22.9954277 24.77,25.8269722 C24.7311106,25.9630441 24.7162224,26.1048238 24.726,26.2459821 C24.6917908,27.3627611 25.1183351,28.4446393 25.906,29.2389099 C26.7160667,29.8165697 27.7279723,30.0379431 28.706,29.8514625 C30.506,29.6958303 33.728,25.860892 34.518,24.3863762 L34.578,24.300579 C36.094,27.1318887 37.678,30.0869062 38.978,32.4812485 C39.8447597,34.2321185 40.8041106,35.9358309 41.852,37.5851881 L41.852,37.5951645 C42.976301,39.133446 43.8074572,40.8648847 44.304,42.7030948 C44.3129771,42.7472815 44.3196527,42.7919027 44.324,42.8367789 C44.258,43.0502744 44.058,43.690761 43.886,43.7805488 C43.858,43.7925205 43.606,43.9062518 42.788,43.6728034 C40.8230115,41.5190123 38.627223,39.5866702 36.24,37.9104196 C35.884,37.7162118 35.54,37.5419569 35.208,37.3876549 C33.9307191,36.7364597 32.5238477,36.3779022 31.09,36.3381348 C29.4444836,36.3067804 27.9093866,37.1613285 27.072,38.5748496 C25.394,41.2884375 27.744,42.7370146 29.006,43.5171711 C29.4539751,43.7747725 29.8765235,44.0740679 30.268,44.4110589 C30.4332044,44.5492367 30.5645517,44.7232711 30.652,44.9198567 C30.7269588,45.1135938 30.8172435,45.3010766 30.922,45.4805318 L30.972,45.5643338 C31.094,45.775834 31.244,46.0112777 31.42,46.2666742 L31.42,46.2806412 C32.1448389,47.3011377 32.9288423,48.2784986 33.768,49.2077247 L34.132,49.6067817 C34.2786667,49.7690649 34.4286667,49.9326783 34.582,50.0976219 C36.6037503,52.2967112 38.7965799,54.3329232 41.14,56.1872324 L41.186,56.2231476 C41.468,56.4406337 41.746,56.6501386 42.026,56.855653 C42.2,56.9833512 42.374,57.1050636 42.546,57.226776 C42.718,57.3484884 42.946,57.5081113 43.146,57.6398001 L43.236,57.7016539 Z M59.768,59.4076228 C59.232,58.4339236 57.952,58.2423762 52.71,57.8552909 C51.17,57.7395644 49.596,57.6238378 48.338,57.4562339 C47.4962737,57.2991008 46.6887018,56.9958778 45.952,56.5603508 C45.932,56.5483791 45.922,56.5264309 45.902,56.5144592 C44.4130089,55.6617832 43.0069269,54.6724982 41.702,53.5594418 L41.668,53.5315078 C41.524,53.4117907 41.382,53.2860877 41.238,53.1643753 C38.9983044,51.2252383 36.8984319,49.1309827 34.954,46.8971843 L34.828,46.747538 C34.638,46.5260613 34.462,46.3125658 34.296,46.1090467 C34.19,45.9773579 34.096,45.8516549 33.994,45.7299425 C33.892,45.6082301 33.816,45.50248 33.736,45.3947346 C33.656,45.2869892 33.554,45.153305 33.476,45.0415691 C33.398,44.9298331 33.332,44.8420405 33.276,44.7382857 C33.22,44.6345309 33.168,44.5766676 33.126,44.5088279 C33.0475643,44.3820108 32.980632,44.2484618 32.926,44.1097709 C32.8445203,43.9084073 32.7426595,43.7158629 32.622,43.5351287 C32.0188944,42.665574 31.2140391,41.9543436 30.276,41.4620273 C29.102,40.7377388 28.84,40.4983046 28.932,40.1830495 C28.9837116,40.0531337 29.050858,39.9298757 29.132,39.815917 C30.31,37.9184008 33.028,38.864166 35.102,39.9954927 C37.355101,41.6259255 39.4328553,43.4848095 41.302,45.5423857 C41.4397882,45.6877793 41.6115893,45.7967872 41.802,45.859636 C42.781425,46.2806383 43.8847064,46.3141652 44.888,45.9534144 C44.932,45.9334616 44.984,45.9254804 45.028,45.9035323 L45.028,45.9035323 C45.8712037,45.3712166 46.4588751,44.517388 46.654,43.5411146 C46.7227905,43.2925714 46.7478286,43.0340044 46.728,42.7769203 C46.6206395,41.8774979 46.3750957,40.9999311 46,40.1750684 C45.4284056,38.7321684 44.6750164,37.3677323 43.758,36.1146629 C43.742,36.0907195 43.716,36.0508138 43.678,35.9909552 L43.678,35.9909552 C43.418,35.5659595 42.574,34.0754814 39.98,29.2748251 L39.834,29.0054616 C38.516,26.5632324 37.082,23.8855596 35.834,21.5670382 C34.732,19.5079038 33.648,17.4747082 32.686,15.6669797 C32.3173708,15.030972 32.2183856,14.2745024 32.4110052,13.5654003 C32.6036249,12.8562982 33.0719217,12.2531987 33.712,11.8899048 C34.2497582,11.5760958 34.8923223,11.4939839 35.492,11.6624422 C36.2626584,11.8726326 36.9167439,12.3821628 37.308,13.0770995 L49.648,35.3644356 C49.9672206,35.9440695 50.6969964,36.1557862 51.278,35.8373182 C51.8590035,35.5188501 52.0712205,34.7907947 51.752,34.2111608 L37.116,7.56213107 C36.4881983,6.44224111 36.8675919,5.02729083 37.972,4.36967468 C38.5214921,4.04241121 39.1812875,3.95373265 39.798,4.1242546 C40.4291049,4.29793692 40.9603031,4.72391529 41.266,5.30147289 L52.214,23.3947195 L57.054,31.8188138 C57.3663067,32.3663974 58.050576,32.5787983 58.6191602,32.304648 C59.1877445,32.0304977 59.4460525,31.3636207 59.21,30.7792702 L45.422,6.78396983 C45.127618,6.34547201 45.0468143,5.79803489 45.202,5.29349175 C45.3948474,4.61277689 45.8191041,4.02021774 46.402,3.61745215 C47.4659013,3.01985821 48.8112912,3.3346032 49.498,4.34174069 L61.584,24.2207676 L64.692,29.4643772 C65.0233709,30.0379503 65.7580716,30.2349272 66.333,29.9043375 C66.9079284,29.5737479 67.1053708,28.8407791 66.774,28.267206 L59.746,16.4351645 C58.42,13.3584347 59.346,12.8436511 59.692,12.6600849 C60.7033092,12.0307868 62.0320222,12.3078657 62.706,13.2885997 C63.56,14.7591249 64.86,16.7983065 66.366,19.1567336 C70.886,26.2340104 79.296,39.4068835 78.058,42.7010995 C76.47,46.9211278 78.674,51.3546516 79.946,53.3978237 L61.91,63.2824668 L59.768,59.4076228 Z M66.714,78.8257388 L60.18,66.9697539 L85.64,53.0147289 L92.17,64.8687185 L66.714,78.8257388 Z" id="Shape" fill="#006CB0" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                <h1>Congratulations!</h1>
+                <h2 class="head">You are ready to receive your first orders</h2>
+                <div class="content-middle">
+                    <p>Your personal link to the widget. Start getting orders now.</p>
+                    <p>
+                        <a class="widget-link" href="http://digifabster.local:8000/4taps_newms86/client/upload/" target="_blank">digifabster.com/4taps_newms86/client/upload/</a>
+                    </p>
+                    <div id="widget_full_url" class="hidden-alt">http://digifabster.local:8000/4taps_newms86/client/upload/</div>
+                    <div class="button-block">
+                        <button class="btn square gray copy_button" data-clipboard-target="#widget_full_url">Copy</button>
+                    </div>
+                </div>
+                <h2 class="steps-title">Next steps</h2>
+                <div class="steps">
+                    <ol>
+                        <li><a href="/manage/company/">Finish your account setup</a></li>
+                        <li><a href="/manage/materials/">Add more materials</a></li>
+                        <li><a href="/manage/install_widget/">Install widget to the website</a></li>
+                    </ol>
+                </div>
+                <a href="/manage/how_it_works/" class="guide-link" target="_blank">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+    <g fill="none" fill-rule="evenodd" stroke="#007FD7" stroke-linecap="round" stroke-linejoin="round" transform="translate(1 1)">
+        <circle cx="7.5" cy="7.5" r="7.5"/>
+        <path d="M6 4.5l4.5 3-4.5 3z"/>
+    </g>
+</svg>
+</div>
+                    <div class="text">See 3-minutes video guide</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+              </form>
+    </div>
+    </div>
+
+    
+    
+    
+        
+
+
+   <script>
+      window.intercomSettings = {
+        app_id: "qmoijts4",
+        
+        
+            name: "Dmitrii Vlasov",
+            email: "1white@list.ru",
+            company: {
+                id: '4taps_newms86',
+                name: 'Digifabster Test',
+                created_at: 'Dec. 16, 2016, 5:52 p.m.',
+                website: '',
+                plan: 'Starter Archived July 2018 month',
+                monthly_spend: '60.0',
+                card_is_active: true
+            }
+        
+      };
+    </script>
+    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/qmoijts4';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+    
+    
+</body>
+    <!-- Mainly scripts -->
+    <script src="static/js/3rd_party/jquery.custom-scrollbar.min.js"></script>
+    <script src="static/js/3rd_party/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="static/js/jquery.minimalect.js"></script>
+
+    <!-- Custom and plugin javascript -->
+
+    <script src="static/js/3rd_party/inspinia.js"></script>
+    <script src="static/js/GetStartedActions.js"></script>
+    <script>
+    var HW_config = {
+        selector: ".nav-logo-header", // CSS selector where to inject the badge
+        account: "JPY4wy" // your account ID
+    };
+    </script>
+    <script async src="static/js/headway.js"></script>
+    
+    <script type="text/javascript" src="static/js/FiltersUIApp.js"></script>
+    <script type="text/javascript" src="static/js/OrdersUIApp.js"></script>
+<script src="static/js/GlobalApp.js"></script>
+</html>
